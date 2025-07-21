@@ -1,9 +1,20 @@
 ---
 // Hero section component for DeFi México
+import logoImage from '../assets/images/Logo DeFi México.png';
 ---
 
 <section id="hero" class="hero">
   <div class="hero-content">
+    <div class="hero-logo">
+      <img 
+        src={logoImage.src} 
+        alt="DeFi México Logo" 
+        class="logo-image" 
+        width={logoImage.width}
+        height={logoImage.height}
+      />
+    </div>
+    
     <h1 class="hero-title">
       Ayudamos a startups
       <br />
@@ -114,6 +125,24 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .hero-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-image:hover {
+    transform: scale(1.05);
   }
 
   @media (max-width: 768px) {
