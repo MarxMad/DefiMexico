@@ -1,0 +1,168 @@
+---
+// Strategic Investments section component for DeFi México
+---
+
+<section id="investments" class="investments-section">
+  <div class="container">
+    <h2 class="section-title">Inversiones Estratégicas</h2>
+    <p class="section-description">
+      De vez en cuando, también invertimos en proyectos de infraestructura que impulsan el ecosistema crypto hacia adelante. Aquí están algunas de nuestras inversiones no-acelerador.
+    </p>
+    
+    <div class="investments-grid">
+      <div class="investment-item">
+        <div class="investment-logo">🌮</div>
+        <span class="investment-name">TACOSWAP</span>
+      </div>
+      
+      <div class="investment-item">
+        <div class="investment-logo">🌵</div>
+        <span class="investment-name">CACTUS PAY</span>
+      </div>
+      
+      <div class="investment-item">
+        <div class="investment-logo">⚡</div>
+        <span class="investment-name">Lightning MX</span>
+      </div>
+      
+      <div class="investment-item">
+        <div class="investment-logo">🏛️</div>
+        <span class="investment-name">Aztec Protocol</span>
+      </div>
+      
+      <div class="investment-item">
+        <div class="investment-logo">🎮</div>
+        <span class="investment-name">LuchaCrypto</span>
+      </div>
+      
+      <div class="investment-item">
+        <div class="investment-logo">🔥</div>
+        <span class="investment-name">ChiliDAO</span>
+      </div>
+      
+      <div class="investment-item">
+        <div class="investment-logo">💎</div>
+        <span class="investment-name">MexiCoin</span>
+      </div>
+      
+      <div class="investment-item">
+        <div class="investment-logo">🌊</div>
+        <span class="investment-name">Wave Protocol</span>
+      </div>
+      
+      <div class="investment-item">
+        <div class="investment-logo">🏔️</div>
+        <span class="investment-name">Sierra Labs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .investments-section {
+    padding: 6rem 2rem;
+    background: #121212;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+  }
+
+  .section-description {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 0 0 4rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .investments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .investment-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .investment-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+  }
+
+  .investment-logo {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .investment-item:hover .investment-logo {
+    background: linear-gradient(135deg, #3245ff 0%, #bc52ee 100%);
+    transform: scale(1.1);
+  }
+
+  .investment-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .investments-section {
+      padding: 4rem 1rem;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+    }
+    
+    .section-description {
+      font-size: 1.1rem;
+    }
+    
+    .investments-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .investment-logo {
+      font-size: 2.5rem;
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style> 

@@ -1,0 +1,26 @@
+---
+import Layout from './Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "DeFi México - Acelerador de Startups Crypto", description = "DeFi México es el acelerador líder y comunidad de fundadores en el ecosistema crypto de México." } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Navbar />
+  <Sidebar />
+  <slot />
+</Layout>
+
+<style>
+  /* Asegurar que el contenido principal tenga el padding correcto */
+  :global(main) {
+    position: relative;
+    z-index: 1;
+  }
+</style> 

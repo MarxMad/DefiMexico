@@ -1,22 +1,108 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "DeFi México - Acelerador de Startups Crypto", description = "DeFi México es el acelerador líder y comunidad de fundadores en el ecosistema crypto de México." } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	* {
+		box-sizing: border-box;
+	}
+
 	html,
 	body {
 		margin: 0;
+		padding: 0;
 		width: 100%;
 		height: 100%;
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		background: #121212;
+		color: white;
+		overflow-x: hidden;
+	}
+
+	/* Scrollbar personalizada */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgba(255, 255, 255, 0.3);
+		border-radius: 4px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: rgba(255, 255, 255, 0.5);
+	}
+
+	/* Smooth scrolling */
+	html {
+		scroll-behavior: smooth;
+	}
+
+	/* Selección de texto */
+	::selection {
+		background: rgba(188, 82, 238, 0.3);
+		color: white;
+	}
+
+	/* Focus styles */
+	*:focus {
+		outline: 2px solid #3245ff;
+		outline-offset: 2px;
+	}
+
+	/* Animaciones globales */
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	.fade-in-up {
+		animation: fadeInUp 0.6s ease-out;
+	}
+
+	.fade-in {
+		animation: fadeIn 0.6s ease-out;
 	}
 </style>

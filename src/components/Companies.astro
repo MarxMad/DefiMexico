@@ -1,0 +1,306 @@
+---
+// Companies section component for DeFi México
+---
+
+<section id="companies" class="companies-section">
+  <div class="container">
+    <h2 class="section-title">Empresas</h2>
+    <p class="section-subtitle">
+      Los alumni de DeFi México han fundado muchas de las startups crypto más impactantes de México.
+    </p>
+    
+    <div class="stats-section">
+      <span class="stats-label">Valoración Combinada</span>
+      <span class="stats-value">$2.5B</span>
+    </div>
+    
+    <div class="filters">
+      <div class="filter-group">
+        <select class="filter-select">
+          <option value="">Cohorte</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <select class="filter-select">
+          <option value="">Categoría</option>
+          <option value="defi">DeFi</option>
+          <option value="infrastructure">Infraestructura</option>
+          <option value="consumer">Consumer</option>
+          <option value="gaming">Gaming</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="companies-grid">
+      <div class="company-card">
+        <div class="company-icon">🌮</div>
+        <div class="company-info">
+          <h3 class="company-name">TacoSwap</h3>
+          <p class="company-description">DEX nativo de México</p>
+          <div class="company-tags">
+            <span class="tag">▲ ALL12</span>
+            <span class="tag">DeFi</span>
+          </div>
+        </div>
+        <div class="company-arrow">→</div>
+      </div>
+      
+      <div class="company-card">
+        <div class="company-icon">🌵</div>
+        <div class="company-info">
+          <h3 class="company-name">CactusPay</h3>
+          <p class="company-description">Pagos crypto para comercios</p>
+          <div class="company-tags">
+            <span class="tag">▲ ALL8</span>
+            <span class="tag">Payments</span>
+          </div>
+        </div>
+        <div class="company-arrow">→</div>
+      </div>
+      
+      <div class="company-card">
+        <div class="company-icon">🔥</div>
+        <div class="company-info">
+          <h3 class="company-name">ChiliDAO</h3>
+          <p class="company-description">Governance para startups</p>
+          <div class="company-tags">
+            <span class="tag">▲ ALL15</span>
+            <span class="tag">DAO</span>
+          </div>
+        </div>
+        <div class="company-arrow">→</div>
+      </div>
+      
+      <div class="company-card">
+        <div class="company-icon">🏛️</div>
+        <div class="company-info">
+          <h3 class="company-name">Aztec Protocol</h3>
+          <p class="company-description">Privacidad en blockchain</p>
+          <div class="company-tags">
+            <span class="tag">▲ ALL6</span>
+            <span class="tag">Privacy</span>
+          </div>
+        </div>
+        <div class="company-arrow">→</div>
+      </div>
+      
+      <div class="company-card">
+        <div class="company-icon">⚡</div>
+        <div class="company-info">
+          <h3 class="company-name">Lightning MX</h3>
+          <p class="company-description">Lightning Network en México</p>
+          <div class="company-tags">
+            <span class="tag">▲ ALL10</span>
+            <span class="tag">Bitcoin</span>
+          </div>
+        </div>
+        <div class="company-arrow">→</div>
+      </div>
+      
+      <div class="company-card">
+        <div class="company-icon">🎮</div>
+        <div class="company-info">
+          <h3 class="company-name">LuchaCrypto</h3>
+          <p class="company-description">Gaming NFT mexicano</p>
+          <div class="company-tags">
+            <span class="tag">▲ ALL7</span>
+            <span class="tag">Gaming</span>
+          </div>
+        </div>
+        <div class="company-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .companies-section {
+    padding: 6rem 2rem;
+    background: #121212;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 0 0 3rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stats-section {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .stats-label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stats-value {
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .filter-select {
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .filter-select:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .filter-select:focus {
+    outline: none;
+    border-color: #3245ff;
+  }
+
+  .companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .company-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .company-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .company-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  .company-info {
+    flex: 1;
+  }
+
+  .company-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .company-description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 1rem 0;
+  }
+
+  .company-tags {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .company-arrow {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .company-card:hover .company-arrow {
+    color: white;
+    transform: translateX(5px);
+  }
+
+  @media (max-width: 768px) {
+    .companies-section {
+      padding: 4rem 1rem;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+    }
+    
+    .stats-value {
+      font-size: 3rem;
+    }
+    
+    .filters {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .companies-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

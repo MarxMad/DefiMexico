@@ -1,0 +1,139 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Test - DeFi México" description="Página de prueba para verificar el comportamiento del scroll">
+	<main class="test-page">
+		<section class="hero-section">
+			<h1>Página de Prueba</h1>
+			<p>Haz scroll para ver el comportamiento del menú hamburguesa y los colores</p>
+			<div class="debug-info">
+				<p>Página: <span id="current-page">Detectando...</span></p>
+				<p>Scroll: <span id="scroll-status">0px</span></p>
+				<p>Clases navbar: <span id="navbar-classes">-</span></p>
+			</div>
+		</section>
+		
+		<section class="content-section">
+			<h2>Contenido de Prueba</h2>
+			<p>Este contenido es para probar el scroll y el comportamiento del menú hamburguesa.</p>
+			<div class="spacer"></div>
+			<p>Más contenido para hacer scroll...</p>
+			<div class="spacer"></div>
+			<p>Aún más contenido...</p>
+			<div class="spacer"></div>
+			<p>Y más contenido para scroll...</p>
+			<div class="spacer"></div>
+			<p>Finalmente, el último contenido.</p>
+		</section>
+	</main>
+</MainLayout>
+
+<style>
+	.test-page {
+		padding-top: 80px;
+	}
+
+	.hero-section {
+		height: 100vh;
+		background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: white;
+	}
+
+	.hero-section h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.hero-section p {
+		font-size: 1.25rem;
+		opacity: 0.8;
+	}
+
+	.content-section {
+		padding: 4rem 2rem;
+		background: #121212;
+		color: white;
+	}
+
+	.content-section h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.spacer {
+		height: 50vh;
+		background: rgba(255, 255, 255, 0.05);
+		margin: 2rem 0;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		opacity: 0.7;
+	}
+
+	.debug-info {
+		background: rgba(0, 0, 0, 0.5);
+		padding: 1rem;
+		border-radius: 8px;
+		margin-top: 2rem;
+		font-family: monospace;
+		font-size: 0.9rem;
+	}
+
+	.debug-info p {
+		margin: 0.5rem 0;
+	}
+
+	.debug-info span {
+		color: #10b981;
+		font-weight: bold;
+	}
+</style>
+
+<script>
+	// Debug script para mostrar información en tiempo real
+	document.addEventListener('DOMContentLoaded', function() {
+		const currentPageSpan = document.getElementById('current-page');
+		const scrollStatusSpan = document.getElementById('scroll-status');
+		const navbarClassesSpan = document.getElementById('navbar-classes');
+		const navbar = document.getElementById('navbar');
+
+		// Detectar página actual
+		function getCurrentPage() {
+			const path = window.location.pathname;
+			if (path === '/') return 'home';
+			if (path === '/acelerador') return 'acelerador';
+			if (path === '/empresas') return 'empresas';
+			if (path === '/inversiones') return 'inversiones';
+			if (path === '/aplicacion') return 'aplicacion';
+			if (path === '/test') return 'test';
+			return 'home';
+		}
+
+		// Actualizar información de debug
+		function updateDebugInfo() {
+			if (currentPageSpan) {
+				currentPageSpan.textContent = getCurrentPage();
+			}
+			
+			if (scrollStatusSpan) {
+				scrollStatusSpan.textContent = window.scrollY + 'px';
+			}
+			
+			if (navbarClassesSpan && navbar) {
+				navbarClassesSpan.textContent = navbar.className;
+			}
+		}
+
+		// Actualizar al cargar y en cada scroll
+		updateDebugInfo();
+		window.addEventListener('scroll', updateDebugInfo);
+	});
+</script> 
