@@ -1,7 +1,6 @@
 ---
 // Hero section component for DeFi México
 import logoImage from '../assets/images/Logo DeFi México.png';
-import heroVideo from '../assets/videos/defimexico-hero.mp4';
 ---
 
 <section id="hero" class="hero">
@@ -12,7 +11,7 @@ import heroVideo from '../assets/videos/defimexico-hero.mp4';
     muted 
     playsinline
   >
-    <source src={heroVideo.src} type="video/mp4" />
+    <source src="/videos/Whisk_cauajdk3mguyogriltrmnwi.mp4" type="video/mp4" />
     Tu navegador no soporta videos HTML5.
   </video>
   
@@ -28,15 +27,11 @@ import heroVideo from '../assets/videos/defimexico-hero.mp4';
     </div>
     
     <h1 class="hero-title">
-      Ayudamos a startups
-      <br />
-      de DeFi a alcanzar
-      <br />
-      la velocidad de escape.
+      Tu Puerta de Entrada a las Finanzas Descentralizadas en México
     </h1>
     
     <p class="hero-subtitle">
-      DeFi México es el acelerador líder y comunidad de fundadores en el ecosistema crypto de México.
+      DeFi México es la plataforma líder en línea para explorar y participar en el ecosistema de finanzas descentralizadas en México. Descubre tendencias, recursos educativos e insights de la comunidad con confianza.
     </p>
     
     <div class="hero-stats">
@@ -56,6 +51,7 @@ import heroVideo from '../assets/videos/defimexico-hero.mp4';
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: #000000; /* Fallback color */
   }
 
   .hero-video {
@@ -65,7 +61,7 @@ import heroVideo from '../assets/videos/defimexico-hero.mp4';
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.2;
+    opacity: 0.3;
     z-index: 1;
   }
 
@@ -73,10 +69,11 @@ import heroVideo from '../assets/videos/defimexico-hero.mp4';
     position: relative;
     z-index: 2;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     padding: 0 2rem;
   }
 
+  /* Estilos existentes */
   .hero-logo {
     display: flex;
     justify-content: center;
@@ -156,7 +153,6 @@ import heroVideo from '../assets/videos/defimexico-hero.mp4';
 
   @media (max-width: 768px) {
     .hero {
-      padding: 0 1rem;
       padding-top: 100px;
     }
     
