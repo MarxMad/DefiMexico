@@ -15,12 +15,14 @@
     <!-- Logo animado en el centro -->
     <div class="logo-container">
       <a href="/acelerador" class="logo-animation">
-        <img 
-          src="https://raw.githubusercontent.com/Vaios0x/DefiMexico/main/logo-defi-mexico.png" 
-          alt="DeFi México Logo" 
-          class="logo-image" 
-        />
-        <span class="logo-text">DeFi México</span>
+        <div class="logo-wrapper">
+          <img 
+            src="https://raw.githubusercontent.com/Vaios0x/DefiMexico/main/logo-defi-mexico.png" 
+            alt="DeFi México Logo" 
+            class="logo-image" 
+          />
+          <span class="logo-text">DeFi México</span>
+        </div>
       </a>
     </div>
     
@@ -38,12 +40,14 @@
   <div class="mobile-menu">
     <div class="mobile-menu-header">
       <a href="/acelerador" class="mobile-logo">
-        <img 
-          src="https://raw.githubusercontent.com/Vaios0x/DefiMexico/main/logo-defi-mexico.png" 
-          alt="DeFi México Logo" 
-          class="mobile-logo-image" 
-        />
-        <span class="logo-text">DeFi México</span>
+        <div class="logo-wrapper">
+          <img 
+            src="https://raw.githubusercontent.com/Vaios0x/DefiMexico/main/logo-defi-mexico.png" 
+            alt="DeFi México Logo" 
+            class="mobile-logo-image" 
+          />
+          <span class="logo-text">DeFi México</span>
+        </div>
       </a>
       <button class="close-menu" id="close-menu">✕</button>
     </div>
@@ -53,12 +57,11 @@
         <li><a href="/acelerador" class="mobile-nav-link">DeFi México</a></li>
         <li><a href="/aplicacion" class="mobile-nav-link">Aplicación</a></li>
         <li><a href="/empresas" class="mobile-nav-link">Empresas</a></li>
-        <li><a href="#startup-ideas" class="mobile-nav-link">Ideas de Startup</a></li>
+        <li><a href="/ideas-startup" class="mobile-nav-link">Ideas de Startup</a></li>
         <li><a href="/inversiones" class="mobile-nav-link">Inversiones Estratégicas</a></li>
-        <li><a href="#essays" class="mobile-nav-link">Artículos</a></li>
-        <li><a href="#podcast" class="mobile-nav-link">Podcast ↗</a></li>
-        <li><a href="#jobs" class="mobile-nav-link">Trabajos</a></li>
-        <li><a href="#signin" class="mobile-nav-link">Iniciar Sesión</a></li>
+        <li><a href="/articulos" class="mobile-nav-link">Artículos</a></li>
+        <li><a href="/podcast" class="mobile-nav-link">Podcast ↗</a></li>
+        <li><a href="/trabajos" class="mobile-nav-link">Trabajos</a></li>
       </ul>
     </nav>
   </div>
@@ -383,23 +386,37 @@
   }
 
   /* Estilos existentes */
-  .logo-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 0.5rem;
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo-image, .mobile-logo-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
     transition: transform 0.3s ease;
   }
 
-  .logo-animation:hover .logo-image {
+  .logo-animation:hover .logo-image,
+  .mobile-logo:hover .mobile-logo-image {
     transform: scale(1.1);
   }
 
-  /* Estilos existentes */
-  .mobile-logo-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 0.5rem;
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.02em;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
+
+  /* Resto de los estilos existentes */
 </style>
 
 <script>
