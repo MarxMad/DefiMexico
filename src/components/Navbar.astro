@@ -1,5 +1,6 @@
 ---
 // Navbar component for DeFi México
+import logoImage from '../assets/images/logo-defi-mexico.png';
 ---
 
 <nav id="navbar" class="navbar">
@@ -14,7 +15,7 @@
     <!-- Logo animado en el centro -->
     <div class="logo-container">
       <a href="/acelerador" class="logo-animation">
-        <div class="logo-icon">🚀</div>
+        <img src={logoImage} alt="DeFi México Logo" class="logo-image" />
         <span class="logo-text">DeFi México</span>
       </a>
     </div>
@@ -33,7 +34,7 @@
   <div class="mobile-menu">
     <div class="mobile-menu-header">
       <a href="/acelerador" class="mobile-logo">
-        <div class="logo-icon">🚀</div>
+        <img src={logoImage} alt="DeFi México Logo" class="mobile-logo-image" />
         <span class="logo-text">DeFi México</span>
       </a>
       <button class="close-menu" id="close-menu">✕</button>
@@ -371,6 +372,24 @@
   /* Asegurar que el hamburger menu sea visible cuando debe serlo */
   .navbar.scrolled .hamburger-menu {
     display: flex !important;
+  }
+
+  .logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-animation:hover .logo-image {
+    transform: scale(1.1);
+  }
+
+  /* Estilos existentes */
+  .mobile-logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
   }
 </style>
 
