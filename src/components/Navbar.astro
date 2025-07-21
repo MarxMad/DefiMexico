@@ -1,6 +1,6 @@
 ---
 // Navbar component for DeFi México
-import logoImage from '../assets/images/logo-defi-mexico.png';
+// Eliminamos la importación de imagen
 ---
 
 <nav id="navbar" class="navbar">
@@ -15,7 +15,11 @@ import logoImage from '../assets/images/logo-defi-mexico.png';
     <!-- Logo animado en el centro -->
     <div class="logo-container">
       <a href="/acelerador" class="logo-animation">
-        <img src={logoImage} alt="DeFi México Logo" class="logo-image" />
+        <img 
+          src="https://raw.githubusercontent.com/Vaios0x/DefiMexico/main/logo-defi-mexico.png" 
+          alt="DeFi México Logo" 
+          class="logo-image" 
+        />
         <span class="logo-text">DeFi México</span>
       </a>
     </div>
@@ -34,7 +38,11 @@ import logoImage from '../assets/images/logo-defi-mexico.png';
   <div class="mobile-menu">
     <div class="mobile-menu-header">
       <a href="/acelerador" class="mobile-logo">
-        <img src={logoImage} alt="DeFi México Logo" class="mobile-logo-image" />
+        <img 
+          src="https://raw.githubusercontent.com/Vaios0x/DefiMexico/main/logo-defi-mexico.png" 
+          alt="DeFi México Logo" 
+          class="mobile-logo-image" 
+        />
         <span class="logo-text">DeFi México</span>
       </a>
       <button class="close-menu" id="close-menu">✕</button>
@@ -374,6 +382,7 @@ import logoImage from '../assets/images/logo-defi-mexico.png';
     display: flex !important;
   }
 
+  /* Estilos existentes */
   .logo-image {
     width: 40px;
     height: 40px;
