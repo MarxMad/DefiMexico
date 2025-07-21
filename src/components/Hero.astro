@@ -1,6 +1,7 @@
 ---
 // Hero section component for DeFi México
 import logoImage from '../assets/images/Logo DeFi México.png';
+import heroVideo from '../assets/videos/Whisk_cauajdk3mguyogriltrmnwi';
 ---
 
 <section id="hero" class="hero">
@@ -11,7 +12,7 @@ import logoImage from '../assets/images/Logo DeFi México.png';
     muted 
     playsinline
   >
-    <source src="/videos/Whisk_cauajdk3mguyogriltrmnwi.mp4" type="video/mp4" />
+    <source src={heroVideo} type="video/mp4" />
     Tu navegador no soporta videos HTML5.
   </video>
   
@@ -51,7 +52,7 @@ import logoImage from '../assets/images/Logo DeFi México.png';
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: #000000; /* Fallback color */
+    background: #000000; /* Fallback */
   }
 
   .hero-video {
@@ -61,7 +62,7 @@ import logoImage from '../assets/images/Logo DeFi México.png';
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.3;
+    opacity: 0.4;
     z-index: 1;
   }
 
@@ -99,16 +100,18 @@ import logoImage from '../assets/images/Logo DeFi México.png';
     color: white;
     margin: 0 0 2rem 0;
     letter-spacing: -0.02em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
   .hero-subtitle {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     margin: 0 0 3rem 0;
     line-height: 1.6;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
   }
 
   .hero-stats {
@@ -120,10 +123,10 @@ import logoImage from '../assets/images/Logo DeFi México.png';
   .stat-item {
     text-align: center;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
     transition: transform 0.3s ease;
   }
 
@@ -134,7 +137,7 @@ import logoImage from '../assets/images/Logo DeFi México.png';
   .stat-label {
     display: block;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
