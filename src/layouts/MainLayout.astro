@@ -2,6 +2,7 @@
 import Layout from './Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Sidebar from '../components/Sidebar.astro';
+import SplashCursor from '../components/SplashCursor.astro';
 
 interface Props {
   title?: string;
@@ -14,6 +15,7 @@ const { title = "DeFi México - Acelerador de Startups Crypto", description = "D
 <Layout title={title} description={description}>
   <Navbar />
   <Sidebar />
+  <SplashCursor />
   <slot />
 </Layout>
 
@@ -22,5 +24,10 @@ const { title = "DeFi México - Acelerador de Startups Crypto", description = "D
   :global(main) {
     position: relative;
     z-index: 1;
+  }
+
+  /* Deshabilitar cursor nativo en elementos interactivos */
+  a, button, .startup-card, .filter-select {
+    cursor: none;
   }
 </style> 

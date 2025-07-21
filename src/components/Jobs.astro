@@ -1,0 +1,405 @@
+---
+// Componente de Trabajos para DeFi México
+const jobListings = [
+  {
+    title: "Desarrollador Blockchain Senior",
+    company: "ChiliDAO",
+    location: "Ciudad de México, Remoto",
+    type: "Tiempo Completo",
+    tags: ["Blockchain", "Solidity", "Web3"],
+    salary: "$120,000 - $180,000 MXN",
+    description: "Buscamos un desarrollador blockchain experimentado para construir y mantener smart contracts en nuestra plataforma de gobernanza descentralizada.",
+    logo: "🔥",
+    applicationLink: "#"
+  },
+  {
+    title: "Analista de Riesgo DeFi",
+    company: "CactusPay",
+    location: "Guadalajara, Híbrido",
+    type: "Tiempo Completo",
+    tags: ["Finanzas", "Análisis", "Criptomonedas"],
+    salary: "$90,000 - $140,000 MXN",
+    description: "Únete a nuestro equipo para evaluar y mitigar riesgos en protocolos de finanzas descentralizadas.",
+    logo: "🌵",
+    applicationLink: "#"
+  },
+  {
+    title: "Especialista en Comunicación Web3",
+    company: "TacoSwap",
+    location: "Monterrey, Remoto",
+    type: "Medio Tiempo",
+    tags: ["Marketing", "Comunicación", "Crypto"],
+    salary: "$60,000 - $100,000 MXN",
+    description: "Buscamos un comunicador apasionado por blockchain para gestionar nuestra estrategia de comunicación y comunidad.",
+    logo: "🌮",
+    applicationLink: "#"
+  },
+  {
+    title: "Product Manager DeFi",
+    company: "Stablecoin Mexico",
+    location: "Ciudad de México, Presencial",
+    type: "Tiempo Completo",
+    tags: ["Producto", "Gestión", "Innovación"],
+    salary: "$150,000 - $220,000 MXN",
+    description: "Lidera el desarrollo de productos innovadores en nuestra plataforma de stablecoins respaldadas por peso mexicano.",
+    logo: "💱",
+    applicationLink: "#"
+  },
+  {
+    title: "Diseñador UX/UI Web3",
+    company: "DeFi Wallet Mexico",
+    location: "Querétaro, Híbrido",
+    type: "Tiempo Completo",
+    tags: ["Diseño", "UX/UI", "Blockchain"],
+    salary: "$80,000 - $130,000 MXN",
+    description: "Crea interfaces intuitivas y atractivas para nuestra wallet no custodial, mejorando la experiencia del usuario en DeFi.",
+    logo: "🖥️",
+    applicationLink: "#"
+  }
+];
+---
+
+<section id="jobs" class="jobs-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Trabajos en DeFi</h2>
+      <p class="section-subtitle">Únete a las startups más innovadoras del ecosistema cripto mexicano</p>
+    </div>
+
+    <div class="jobs-filters">
+      <select class="job-filter" id="location-filter">
+        <option value="">Ubicación</option>
+        <option value="remoto">Remoto</option>
+        <option value="presencial">Presencial</option>
+        <option value="hibrido">Híbrido</option>
+      </select>
+
+      <select class="job-filter" id="type-filter">
+        <option value="">Tipo de Trabajo</option>
+        <option value="tiempo-completo">Tiempo Completo</option>
+        <option value="medio-tiempo">Medio Tiempo</option>
+        <option value="freelance">Freelance</option>
+      </select>
+
+      <select class="job-filter" id="category-filter">
+        <option value="">Categoría</option>
+        <option value="desarrollo">Desarrollo</option>
+        <option value="diseno">Diseño</option>
+        <option value="producto">Producto</option>
+        <option value="marketing">Marketing</option>
+        <option value="finanzas">Finanzas</option>
+      </select>
+    </div>
+
+    <div class="jobs-grid" id="jobs-grid">
+      {jobListings.map((job) => (
+        <div 
+          class="job-card" 
+          data-location={job.location.toLowerCase().includes('remoto') ? 'remoto' : job.location.toLowerCase().includes('híbrido') ? 'hibrido' : 'presencial'}
+          data-type={job.type.toLowerCase().replace(' ', '-')}
+          data-category={
+            job.tags.includes('Blockchain') || job.tags.includes('Solidity') ? 'desarrollo' :
+            job.tags.includes('Diseño') ? 'diseno' :
+            job.tags.includes('Producto') ? 'producto' :
+            job.tags.includes('Marketing') ? 'marketing' :
+            job.tags.includes('Finanzas') ? 'finanzas' : ''
+          }
+        >
+          <div class="job-header">
+            <div class="job-logo">{job.logo}</div>
+            <div class="job-meta">
+              <span class="job-type">{job.type}</span>
+              <span class="job-location">{job.location}</span>
+            </div>
+          </div>
+          <h3 class="job-title">{job.title}</h3>
+          <p class="job-company">{job.company}</p>
+          <p class="job-description">{job.description}</p>
+          <div class="job-details">
+            <div class="job-salary">{job.salary}</div>
+            <div class="job-tags">
+              {job.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <div class="job-actions">
+            <a href={job.applicationLink} class="apply-button">Aplicar</a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="jobs-cta">
+      <a href="#" class="cta-button">Ver Más Trabajos</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .jobs-section {
+    background: #000000; /* Negro puro */
+    padding: 6rem 1rem;
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #9ca3af; /* gray-400 */
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .jobs-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .job-filter {
+    padding: 0.75rem 1rem;
+    background: #1e293b; /* slate-800 */
+    border: 1px solid #475569; /* slate-700 */
+    border-radius: 8px;
+    color: white;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .job-filter:hover {
+    background: #334155; /* slate-700 */
+    border-color: #64748b; /* slate-500 */
+  }
+
+  .job-filter:focus {
+    outline: none;
+    border-color: #3b82f6; /* blue-500 */
+  }
+
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .job-card {
+    background: #1e293b; /* slate-800 */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .job-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+    background: #334155; /* slate-700 */
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .job-logo {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+  }
+
+  .job-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .job-type {
+    font-size: 0.875rem;
+    color: #10b981; /* emerald-500 */
+    margin-bottom: 0.25rem;
+  }
+
+  .job-location {
+    font-size: 0.75rem;
+    color: #6b7280; /* gray-500 */
+  }
+
+  .job-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+  }
+
+  .job-company {
+    font-size: 1rem;
+    color: #9ca3af; /* gray-400 */
+    margin: 0 0 1rem 0;
+  }
+
+  .job-description {
+    color: #9ca3af; /* gray-400 */
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .job-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .job-salary {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #10b981; /* emerald-500 */
+  }
+
+  .job-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e5e7eb; /* gray-200 */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .job-actions {
+    margin-top: auto;
+  }
+
+  .apply-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .apply-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(50, 69, 255, 0.3);
+  }
+
+  .jobs-cta {
+    text-align: center;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .cta-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .jobs-filters {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .job-filter {
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .jobs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const locationFilter = document.getElementById('location-filter');
+    const typeFilter = document.getElementById('type-filter');
+    const categoryFilter = document.getElementById('category-filter');
+    const jobsGrid = document.getElementById('jobs-grid');
+
+    function filterJobs() {
+      const locationValue = locationFilter.value;
+      const typeValue = typeFilter.value;
+      const categoryValue = categoryFilter.value;
+
+      const jobCards = jobsGrid.querySelectorAll('.job-card');
+      let visibleCount = 0;
+
+      jobCards.forEach(card => {
+        const cardLocation = card.dataset.location;
+        const cardType = card.dataset.type;
+        const cardCategory = card.dataset.category;
+
+        const locationMatch = !locationValue || cardLocation === locationValue;
+        const typeMatch = !typeValue || cardType === typeValue;
+        const categoryMatch = !categoryValue || cardCategory === categoryValue;
+
+        if (locationMatch && typeMatch && categoryMatch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    locationFilter.addEventListener('change', filterJobs);
+    typeFilter.addEventListener('change', filterJobs);
+    categoryFilter.addEventListener('change', filterJobs);
+  });
+</script> 

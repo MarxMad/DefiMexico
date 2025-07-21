@@ -8,12 +8,12 @@
       <li><a href="/acelerador" class="nav-link">DeFi México</a></li>
       <li><a href="/aplicacion" class="nav-link">Aplicación</a></li>
       <li><a href="/empresas" class="nav-link">Empresas</a></li>
-      <li><a href="#startup-ideas" class="nav-link">Ideas de Startup</a></li>
+      <li><a href="/ideas-startup" class="nav-link">Ideas de Startup</a></li>
       <li><a href="/inversiones" class="nav-link">Inversiones Estratégicas</a></li>
-      <li><a href="#essays" class="nav-link">Artículos</a></li>
-      <li><a href="#podcast" class="nav-link">Podcast ↗</a></li>
-      <li><a href="#jobs" class="nav-link">Trabajos</a></li>
-      <li><a href="#signin" class="nav-link">Iniciar Sesión</a></li>
+      <li><a href="/articulos" class="nav-link">Artículos</a></li>
+      <li><a href="/podcast" class="nav-link">Podcast ↗</a></li>
+      <li><a href="/trabajos" class="nav-link">Trabajos</a></li>
+      <li><a href="#" class="nav-link wallet-connect">Conectar Wallet</a></li>
     </ul>
   </nav>
 </aside>
@@ -80,6 +80,22 @@
   .nav-link:hover::before,
   .nav-link.active::before {
     width: 8px;
+  }
+
+  .wallet-connect {
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    color: white !important;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .wallet-connect:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(50, 69, 255, 0.3);
   }
 
   @media (max-width: 768px) {

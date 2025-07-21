@@ -1,0 +1,322 @@
+---
+// Componente de Podcast para DeFi México
+const podcastEpisodes = [
+  {
+    title: "DeFi México Talks: Futuro de las Finanzas Descentralizadas",
+    description: "Entrevista exclusiva con líderes del ecosistema cripto mexicano sobre las tendencias y desafíos de DeFi.",
+    host: "Carlos Ramírez",
+    guest: "María González, Fundadora de ChiliDAO",
+    duration: "52:34",
+    date: "15 Ene 2024",
+    category: "Entrevista",
+    tags: ["DeFi", "Blockchain", "Innovación"],
+    image: "🎙️",
+    spotifyLink: "#",
+    appleLink: "#"
+  },
+  {
+    title: "Inversión Inteligente: Estrategias de Yield Farming",
+    description: "Análisis profundo de las mejores estrategias para maximizar rendimientos en protocolos DeFi.",
+    host: "Alejandro Vargas",
+    guest: "Juan Pérez, Analista Financiero",
+    duration: "45:12",
+    date: "22 Dic 2023",
+    category: "Análisis",
+    tags: ["Inversión", "Yield Farming", "Estrategias"],
+    image: "💹",
+    spotifyLink: "#",
+    appleLink: "#"
+  },
+  {
+    title: "Regulación Cripto en México: Perspectivas 2024",
+    description: "Discusión sobre el panorama regulatorio de criptomonedas y su impacto en el ecosistema DeFi.",
+    host: "Sofía Mendoza",
+    guest: "Laura Sánchez, Abogada Especializada",
+    duration: "1:03:45",
+    date: "10 Feb 2024",
+    category: "Regulación",
+    tags: ["Regulación", "Legal", "Blockchain"],
+    image: "⚖️",
+    spotifyLink: "#",
+    appleLink: "#"
+  },
+  {
+    title: "Stablecoins: Revolución Financiera Mexicana",
+    description: "Explorando el potencial de las stablecoins para transformar las finanzas en México.",
+    host: "Juan López",
+    guest: "Roberto Martínez, Economista",
+    duration: "48:22",
+    date: "5 Ene 2024",
+    category: "Tecnología",
+    tags: ["Stablecoins", "Fintech", "Innovación"],
+    image: "💱",
+    spotifyLink: "#",
+    appleLink: "#"
+  },
+  {
+    title: "NFTs más Allá del Arte: Casos de Uso Real",
+    description: "Descubriendo aplicaciones innovadoras de NFTs en diferentes industrias más allá del arte digital.",
+    host: "María García",
+    guest: "David Hernández, Experto en Blockchain",
+    duration: "56:17",
+    date: "18 Feb 2024",
+    category: "Tecnología",
+    tags: ["NFT", "Blockchain", "Innovación"],
+    image: "🖼️",
+    spotifyLink: "#",
+    appleLink: "#"
+  }
+];
+---
+
+<section id="podcast" class="podcast-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">DeFi México Podcast</h2>
+      <p class="section-subtitle">Insights, análisis y conversaciones sobre el ecosistema cripto mexicano</p>
+    </div>
+
+    <div class="podcast-grid">
+      {podcastEpisodes.map((episode) => (
+        <div class="podcast-card">
+          <div class="podcast-header">
+            <div class="podcast-icon">{episode.image}</div>
+            <div class="podcast-meta">
+              <span class="podcast-category">{episode.category}</span>
+              <span class="podcast-date">{episode.date}</span>
+            </div>
+          </div>
+          <h3 class="podcast-title">{episode.title}</h3>
+          <p class="podcast-description">{episode.description}</p>
+          <div class="podcast-details">
+            <div class="podcast-hosts">
+              <span class="host-label">Host:</span>
+              <span class="host-name">{episode.host}</span>
+              <span class="guest-label">Invitado:</span>
+              <span class="guest-name">{episode.guest}</span>
+            </div>
+            <div class="podcast-duration">
+              <span>{episode.duration}</span>
+            </div>
+          </div>
+          <div class="podcast-tags">
+            {episode.tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+          <div class="podcast-actions">
+            <a href={episode.spotifyLink} class="spotify-link" target="_blank">
+              Spotify
+            </a>
+            <a href={episode.appleLink} class="apple-link" target="_blank">
+              Apple Podcasts
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="podcast-cta">
+      <a href="#" class="cta-button">Escucha Todos los Episodios</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .podcast-section {
+    background: #000000; /* Negro puro */
+    padding: 6rem 1rem;
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #9ca3af; /* gray-400 */
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .podcast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .podcast-card {
+    background: #1e293b; /* slate-800 */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .podcast-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+    background: #334155; /* slate-700 */
+  }
+
+  .podcast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .podcast-icon {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+  }
+
+  .podcast-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .podcast-category {
+    font-size: 0.875rem;
+    color: #10b981; /* emerald-500 */
+    margin-bottom: 0.25rem;
+  }
+
+  .podcast-date {
+    font-size: 0.75rem;
+    color: #6b7280; /* gray-500 */
+  }
+
+  .podcast-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .podcast-description {
+    color: #9ca3af; /* gray-400 */
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .podcast-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .podcast-hosts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .host-label, .guest-label {
+    color: #6b7280; /* gray-500 */
+    margin-right: 0.5rem;
+  }
+
+  .host-name, .guest-name {
+    color: #e5e7eb; /* gray-200 */
+    margin-bottom: 0.25rem;
+  }
+
+  .podcast-duration {
+    color: #6b7280; /* gray-500 */
+  }
+
+  .podcast-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e5e7eb; /* gray-200 */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .podcast-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+  }
+
+  .spotify-link, .apple-link {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .spotify-link:hover, .apple-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .podcast-cta {
+    text-align: center;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(50, 69, 255, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .podcast-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

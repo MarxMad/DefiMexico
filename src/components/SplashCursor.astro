@@ -1,0 +1,65 @@
+---
+// Componente de cursor personalizado para DeFi México
+---
+
+<div id="splash-cursor" class="splash-cursor"></div>
+
+<style>
+  .splash-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: 
+      width 0.2s ease-out, 
+      height 0.2s ease-out, 
+      background 0.3s ease;
+    mix-blend-mode: difference;
+    opacity: 0.7;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cursor = document.getElementById('splash-cursor');
+    
+    if (!cursor) return;
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+
+    document.addEventListener('mouseenter', () => {
+      cursor.style.opacity = '1';
+      cursor.style.width = '40px';
+      cursor.style.height = '40px';
+    });
+
+    document.addEventListener('mouseleave', () => {
+      cursor.style.opacity = '0.7';
+      cursor.style.width = '20px';
+      cursor.style.height = '20px';
+    });
+
+    const interactiveElements = document.querySelectorAll('a, button, .startup-card, .filter-select');
+    
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '60px';
+        cursor.style.height = '60px';
+        cursor.style.background = 'linear-gradient(83.21deg, #10b981 0%, #22c55e 100%)';
+      });
+
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '40px';
+        cursor.style.height = '40px';
+        cursor.style.background = 'linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%)';
+      });
+    });
+  });
+</script> 

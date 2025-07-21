@@ -1,0 +1,265 @@
+---
+// Componente de Ideas de Startup para DeFi México
+const startupIdeas = [
+  {
+    title: "MexaChain: Blockchain Hipotecaria",
+    description: "Plataforma descentralizada para tokenizar y financiar propiedades inmobiliarias en México, permitiendo inversión fraccionada y transparente.",
+    category: "Fintech Inmobiliario",
+    tags: ["Blockchain", "Tokenización", "Bienes Raíces"],
+    icon: "🏠",
+    potentialImpact: "Democratizar inversiones inmobiliarias",
+    stage: "Concepto"
+  },
+  {
+    title: "CryptoEduca: Plataforma de Aprendizaje Web3",
+    description: "Marketplace de cursos y certificaciones blockchain con sistema de recompensas basado en tokens, enfocado en el mercado latinoamericano.",
+    category: "Educación Cripto",
+    tags: ["Educación", "Web3", "Tokenización"],
+    icon: "📚",
+    potentialImpact: "Formar nueva generación de profesionales blockchain",
+    stage: "Prototipo"
+  },
+  {
+    title: "AgriChain: Finanzas para Agricultores",
+    description: "Plataforma DeFi que permite a pequeños agricultores mexicanos acceder a microcréditos y seguros utilizando datos de cosechas como colateral.",
+    category: "AgriTech",
+    tags: ["Agricultura", "Microfinanzas", "DeFi"],
+    icon: "🌽",
+    potentialImpact: "Inclusión financiera rural",
+    stage: "Investigación"
+  },
+  {
+    title: "HealthToken: Seguro Médico Descentralizado",
+    description: "Seguro médico basado en blockchain que permite pagos flexibles, transferencia de pólizas y gestión transparente de reclamaciones.",
+    category: "HealthTech",
+    tags: ["Salud", "Seguros", "Web3"],
+    icon: "🩺",
+    potentialImpact: "Revolucionar seguros médicos",
+    stage: "Concepto"
+  },
+  {
+    title: "EcoChain: Bonos de Carbono en Blockchain",
+    description: "Plataforma para tokenizar y comerciar bonos de carbono, incentivando proyectos de sostenibilidad en México con financiamiento cripto.",
+    category: "SustainTech",
+    tags: ["Sostenibilidad", "Medio Ambiente", "Tokenización"],
+    icon: "🌍",
+    potentialImpact: "Financiamiento verde descentralizado",
+    stage: "Investigación"
+  },
+  {
+    title: "CrediCrypto: Scoring Crediticio Descentralizado",
+    description: "Sistema de calificación crediticia basado en blockchain que utiliza datos on-chain y off-chain para democratizar el acceso a créditos.",
+    category: "Fintech",
+    tags: ["Crédito", "Identidad", "DeFi"],
+    icon: "💳",
+    potentialImpact: "Inclusión financiera digital",
+    stage: "Prototipo"
+  }
+];
+---
+
+<section id="startup-ideas" class="startup-ideas-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Ideas de Startup</h2>
+      <p class="section-subtitle">Conceptos innovadores que transformarán el ecosistema cripto mexicano</p>
+    </div>
+
+    <div class="ideas-grid">
+      {startupIdeas.map((idea) => (
+        <div class="idea-card">
+          <div class="idea-header">
+            <div class="idea-icon">{idea.icon}</div>
+            <div class="idea-meta">
+              <span class="idea-category">{idea.category}</span>
+              <span class="idea-stage">{idea.stage}</span>
+            </div>
+          </div>
+          <h3 class="idea-title">{idea.title}</h3>
+          <p class="idea-description">{idea.description}</p>
+          <div class="idea-impact">
+            <span class="impact-label">Impacto Potencial:</span>
+            <span class="impact-value">{idea.potentialImpact}</span>
+          </div>
+          <div class="idea-tags">
+            {idea.tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="ideas-cta">
+      <a href="#" class="cta-button">Proponer Nueva Idea</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .startup-ideas-section {
+    background: #000000; /* Negro puro */
+    padding: 6rem 1rem;
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #9ca3af; /* gray-400 */
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .idea-card {
+    background: #1e293b; /* slate-800 */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .idea-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+    background: #334155; /* slate-700 */
+  }
+
+  .idea-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .idea-icon {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+  }
+
+  .idea-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .idea-category {
+    font-size: 0.875rem;
+    color: #10b981; /* emerald-500 */
+    margin-bottom: 0.25rem;
+  }
+
+  .idea-stage {
+    font-size: 0.75rem;
+    color: #6b7280; /* gray-500 */
+  }
+
+  .idea-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .idea-description {
+    color: #9ca3af; /* gray-400 */
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .idea-impact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .impact-label {
+    font-size: 0.875rem;
+    color: #6b7280; /* gray-500 */
+    margin-bottom: 0.25rem;
+  }
+
+  .impact-value {
+    font-size: 1rem;
+    color: #10b981; /* emerald-500 */
+    font-weight: 600;
+  }
+
+  .idea-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e5e7eb; /* gray-200 */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .ideas-cta {
+    text-align: center;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(50, 69, 255, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .ideas-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

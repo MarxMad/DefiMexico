@@ -1,0 +1,263 @@
+---
+// Componente de Artículos para DeFi México
+const articles = [
+  {
+    title: "Yield Farming: Estrategias Avanzadas en 2024",
+    excerpt: "Descubre cómo maximizar tus rendimientos en DeFi con técnicas de yield farming de próxima generación.",
+    author: "Carlos Ramírez",
+    date: "15 Ene 2024",
+    readTime: "7 min",
+    category: "Inversión",
+    tags: ["DeFi", "Yield Farming", "Estrategias"],
+    image: "🌾"
+  },
+  {
+    title: "Stablecoins: El Futuro de las Finanzas Descentralizadas",
+    excerpt: "Análisis profundo de cómo las stablecoins están transformando el ecosistema financiero mexicano.",
+    author: "Sofía Mendoza",
+    date: "22 Dic 2023",
+    readTime: "9 min",
+    category: "Análisis",
+    tags: ["Stablecoins", "Criptomonedas", "Regulación"],
+    image: "💱"
+  },
+  {
+    title: "Smart Contracts: Guía Completa para Desarrolladores",
+    excerpt: "Aprende a construir smart contracts seguros y eficientes en la blockchain de Ethereum.",
+    author: "Alejandro Vargas",
+    date: "10 Feb 2024",
+    readTime: "12 min",
+    category: "Desarrollo",
+    tags: ["Blockchain", "Solidity", "Programación"],
+    image: "🖥️"
+  },
+  {
+    title: "DAOs: Revolucionando la Gobernanza Empresarial",
+    excerpt: "Exploramos cómo las Organizaciones Autónomas Descentralizadas están cambiando la forma de gestionar proyectos.",
+    author: "María García",
+    date: "5 Ene 2024",
+    readTime: "8 min",
+    category: "Gobernanza",
+    tags: ["DAO", "Descentralización", "Innovación"],
+    image: "🏛️"
+  },
+  {
+    title: "NFTs más Allá del Arte: Casos de Uso Reales",
+    excerpt: "Más allá de los JPEGs: Descubre aplicaciones innovadoras de tokens no fungibles en diversos sectores.",
+    author: "Juan López",
+    date: "18 Feb 2024",
+    readTime: "6 min",
+    category: "Tecnología",
+    tags: ["NFT", "Blockchain", "Innovación"],
+    image: "🖼️"
+  }
+];
+---
+
+<section id="articles" class="articles-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Artículos DeFi</h2>
+      <p class="section-subtitle">Insights, análisis y conocimientos del ecosistema cripto mexicano</p>
+    </div>
+
+    <div class="articles-grid">
+      {articles.map((article) => (
+        <article class="article-card">
+          <div class="article-header">
+            <div class="article-icon">{article.image}</div>
+            <div class="article-meta">
+              <span class="article-category">{article.category}</span>
+              <span class="article-date">{article.date}</span>
+            </div>
+          </div>
+          <h3 class="article-title">{article.title}</h3>
+          <p class="article-excerpt">{article.excerpt}</p>
+          <div class="article-footer">
+            <div class="article-author">
+              <span>Por {article.author}</span>
+            </div>
+            <div class="article-read-time">
+              <span>{article.readTime} lectura</span>
+            </div>
+          </div>
+          <div class="article-tags">
+            {article.tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="articles-cta">
+      <a href="#" class="cta-button">Ver Todos los Artículos</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .articles-section {
+    background: #000000; /* Negro puro */
+    padding: 6rem 1rem;
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #9ca3af; /* gray-400 */
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .article-card {
+    background: #1e293b; /* slate-800 */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .article-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+    background: #334155; /* slate-700 */
+  }
+
+  .article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-icon {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+  }
+
+  .article-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .article-category {
+    font-size: 0.875rem;
+    color: #10b981; /* emerald-500 */
+    margin-bottom: 0.25rem;
+  }
+
+  .article-date {
+    font-size: 0.75rem;
+    color: #6b7280; /* gray-500 */
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .article-excerpt {
+    color: #9ca3af; /* gray-400 */
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .article-author {
+    color: #e5e7eb; /* gray-200 */
+  }
+
+  .article-read-time {
+    color: #6b7280; /* gray-500 */
+  }
+
+  .article-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e5e7eb; /* gray-200 */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .articles-cta {
+    text-align: center;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(50, 69, 255, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 
