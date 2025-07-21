@@ -3,6 +3,7 @@ import Layout from './Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Sidebar from '../components/Sidebar.astro';
 import SplashCursor from '../components/SplashCursor.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
@@ -17,6 +18,7 @@ const { title = "DeFi México - Acelerador de Startups Crypto", description = "D
   <Sidebar />
   <SplashCursor />
   <slot />
+  <Footer />
 </Layout>
 
 <style>
