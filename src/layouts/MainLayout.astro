@@ -1,7 +1,6 @@
 ---
 import Layout from './Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Sidebar from '../components/Sidebar.astro';
+import SidebarNested from '../components/SidebarNested.astro';
 
 interface Props {
   title?: string;
@@ -12,9 +11,26 @@ const { title = "DeFi México - Acelerador de Startups Crypto", description = "D
 ---
 
 <Layout title={title} description={description}>
-  <Navbar />
-  <Sidebar />
+  <SidebarNested />
   <slot />
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="/DEFI.jpg" alt="Logo DeFi México" class="footer-logo-img" />
+        <span class="footer-logo-text">DeFi México</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="/acelerador">Acelerador</a>
+        <a href="/aplicacion">Aplicación</a>
+        <a href="/empresas">Empresas</a>
+        <a href="/inversiones">Inversiones</a>
+        <a href="#startup-ideas">Ideas</a>
+        <a href="#essays">Artículos</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#jobs">Trabajos</a>
+      </nav>
+    </div>
+  </footer>
 </Layout>
 
 <style>
@@ -22,5 +38,70 @@ const { title = "DeFi México - Acelerador de Startups Crypto", description = "D
   :global(main) {
     position: relative;
     z-index: 1;
+    padding-top: 0; /* Sin navbar, el sidebar maneja el layout */
+  }
+  .main-footer {
+    background: #18181b;
+    color: white;
+    padding: 2.5rem 0 1.2rem 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 4rem;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .footer-logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .footer-logo-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .footer-nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .footer-nav a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+  .footer-nav a:hover {
+    color: #bc52ee;
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 0 1rem;
+    }
+    .footer-nav {
+      justify-content: center;
+      gap: 1rem;
+    }
+    .footer-logo-text {
+      font-size: 1rem;
+    }
   }
 </style> 

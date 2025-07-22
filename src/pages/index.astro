@@ -1,19 +1,214 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import Hero from '../components/Hero.astro';
-import Companies from '../components/Companies.astro';
 ---
 
-<MainLayout>
-	<main>
-		<Hero />
-		<Companies />
+<MainLayout title="DeFi México - Acelerador" description="Tu puerta de entrada a las finanzas descentralizadas en México">
+	<main class="accelerator-page">
+		<!-- Hero Section -->
+		<section class="hero-section">
+			<div class="hero-background"></div>
+			<div class="hero-content">
+				<h1 class="hero-title">Tu Puerta de Entrada a las Finanzas Descentralizadas en México</h1>
+				<p class="hero-description">
+					DeFi México es la plataforma líder en línea para explorar y participar en el ecosistema de finanzas descentralizadas en México. Descubre tendencias, recursos educativos e insights de la comunidad con confianza.
+				</p>
+			</div>
+		</section>
+
+		<!-- Key Highlights Section -->
+		<section class="highlights-section">
+			<div class="container">
+				<h2 class="section-subtitle">Key Highlights</h2>
+				<h3 class="section-title">¿Por qué elegir DeFi México?</h3>
+				<p class="section-description">
+					DeFi México ofrece una suite completa de recursos y herramientas para tu viaje en el mundo de las finanzas descentralizadas.
+				</p>
+				<div class="highlights-grid">
+					<div class="highlight-card">
+						<div class="highlight-icon">📚</div>
+						<h4 class="highlight-title">Recursos de Aprendizaje Extensos</h4>
+						<p class="highlight-description">
+							Accede a una vasta biblioteca de artículos, tutoriales y guías que cubren todos los aspectos de DeFi.
+						</p>
+					</div>
+					<div class="highlight-card">
+						<div class="highlight-icon">👥</div>
+						<h4 class="highlight-title">Soporte de Comunidad Activa</h4>
+						<p class="highlight-description">
+							Conéctate con una comunidad vibrante de entusiastas y expertos de DeFi.
+						</p>
+					</div>
+					<div class="highlight-card">
+						<div class="highlight-icon">📈</div>
+						<h4 class="highlight-title">Insights y Análisis de Mercado</h4>
+						<p class="highlight-description">
+							Mantente informado con las últimas tendencias del mercado, análisis y oportunidades de inversión.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Puedes seguir agregando el resto de las secciones de acelerador aquí si lo deseas -->
 	</main>
 </MainLayout>
 
 <style>
-	main {
+	.accelerator-page {
+		padding-top: 0;
+		margin-left: 260px; /* Espacio para el sidebar */
+		min-height: 100vh;
+		background: #1a1a1a;
+		transition: margin-left 0.3s ease;
+	}
+	
+	/* Cuando el sidebar está colapsado */
+	.sidebar-nested.collapsed ~ .accelerator-page {
+		margin-left: 70px;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	/* Hero Section */
+	.hero-section {
 		position: relative;
-		z-index: 1;
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+		background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+		overflow: hidden;
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: 
+			radial-gradient(circle at 30% 70%, rgba(188, 82, 238, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 70% 30%, rgba(50, 69, 255, 0.1) 0%, transparent 50%);
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 2;
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 0 2rem;
+	}
+
+	.hero-title {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 700;
+		color: white;
+		margin: 0 0 2rem 0;
+		line-height: 1.2;
+		letter-spacing: -0.02em;
+	}
+
+	.hero-description {
+		font-size: 1.25rem;
+		color: rgba(255, 255, 255, 0.8);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* Highlights Section */
+	.highlights-section {
+		padding: 6rem 0;
+		background: #121212;
+	}
+
+	.section-subtitle {
+		font-size: 1rem;
+		color: rgba(255, 255, 255, 0.6);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin: 0 0 0.5rem 0;
+		text-align: center;
+	}
+
+	.section-title {
+		font-size: 3rem;
+		font-weight: 700;
+		color: white;
+		text-align: center;
+		margin: 0 0 1rem 0;
+		letter-spacing: -0.02em;
+	}
+
+	.section-description {
+		font-size: 1.25rem;
+		color: rgba(255, 255, 255, 0.7);
+		text-align: center;
+		max-width: 600px;
+		margin: 0 auto 4rem auto;
+		line-height: 1.6;
+	}
+
+	.highlights-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.highlight-card {
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 16px;
+		padding: 2rem;
+		text-align: center;
+		transition: all 0.3s ease;
+	}
+
+	.highlight-card:hover {
+		background: rgba(255, 255, 255, 0.1);
+		transform: translateY(-5px);
+	}
+
+	.highlight-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.highlight-title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: white;
+		margin: 0 0 1rem 0;
+	}
+
+	.highlight-description {
+		color: rgba(255, 255, 255, 0.7);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.highlights-section {
+			padding: 3rem 0;
+		}
+		.section-title {
+			font-size: 2.2rem;
+		}
+		.highlight-card {
+			padding: 1.2rem;
+		}
+		.highlights-grid {
+			gap: 1rem;
+		}
+		
+		.accelerator-page {
+			margin-left: 0; /* En móvil, sin sidebar */
+			padding-top: 80px; /* Espacio para el botón hamburguesa */
+		}
 	}
 </style>
+
+<!-- Espacio de prueba para scroll -->
+<div style="height: 120vh; width: 100%;"></div>
