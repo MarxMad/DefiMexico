@@ -1,0 +1,32 @@
+---
+// RainbowKitWrapper.astro - Wrapper para el componente React de RainbowKit
+---
+
+<div id="rainbowkit-container"></div>
+
+<script>
+  import { createRoot } from 'react-dom/client';
+  import DeFiRainbowKitProvider from './RainbowKitProvider.jsx';
+  import CustomConnectButton from './ConnectButton.jsx';
+  import React from 'react';
+
+  // Esperar a que el DOM esté listo
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('rainbowkit-container');
+    
+    if (container) {
+      const root = createRoot(container);
+      root.render(
+        React.createElement(DeFiRainbowKitProvider, null,
+          React.createElement(CustomConnectButton)
+        )
+      );
+    }
+  });
+</script>
+
+<style>
+  #rainbowkit-container {
+    width: 100%;
+  }
+</style> 

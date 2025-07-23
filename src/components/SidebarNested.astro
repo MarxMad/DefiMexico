@@ -3,18 +3,13 @@
 const menu = [
   { label: 'Dashboard', icon: 'gauge', link: '/' },
   {
-    label: 'Aplicación', icon: 'notes', submenu: [
-      { label: 'Aplicar ahora', link: '/aplicacion' },
-      { label: 'Requisitos', link: '/aplicacion#requisitos' },
-      { label: 'Proceso', link: '/aplicacion#proceso' },
-      { label: 'FAQ', link: '/aplicacion#faq' },
-    ]
+    label: 'Aplicar ahora', icon: 'notes', link: '/aplicacion'
   },
   {
     label: 'Empresas', icon: 'calendar', submenu: [
       { label: 'Portfolio', link: '/empresas' },
-      { label: 'Casos de éxito', link: '/empresas#exitos' },
-      { label: 'Métricas', link: '/empresas#metricas' },
+      { label: 'Casos de éxito', link: '/casos-exito' },
+      { label: 'Métricas', link: '/metricas' },
     ]
   },
   {
@@ -81,7 +76,7 @@ function getIcon(name) {
     <ul class="sidebar-menu">
       {menu.map((item, i) => (
         <li class="sidebar-menu-item" data-has-submenu={item.submenu ? 'true' : 'false'}>
-          <button class="sidebar-link" data-tooltip={item.label} data-index={i} aria-expanded="false" data-href={item.link || ''}>
+          <button class="sidebar-link" data-index={i} aria-expanded="false" data-href={item.link || ''}>
             <span class="sidebar-icon" set:html={getIcon(item.icon)}></span>
             <span class="sidebar-label">{item.label}</span>
             {item.submenu && <span class="sidebar-caret">▼</span>}
@@ -758,23 +753,7 @@ function getIcon(name) {
     display: none !important;
   }
   /* Tooltips */
-  .sidebar-link[data-tooltip]:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    left: 110%;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #23232b;
-    color: #fff;
-    padding: 0.3rem 0.7rem;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    z-index: 10;
-    opacity: 1;
-    pointer-events: none;
-  }
+  
   /* Botón hamburguesa para móvil */
   .mobile-menu-toggle {
     display: none;
@@ -854,6 +833,8 @@ function getIcon(name) {
     .sidebar-nested {
       transform: translateX(-100%);
       transition: transform 0.3s ease;
+      width: 280px; /* Ancho fijo en móvil */
+      z-index: 1000;
     }
 
     .sidebar-nested.mobile-open {
@@ -863,12 +844,73 @@ function getIcon(name) {
     .mobile-overlay {
       display: block;
     }
+
+    /* Mejorar espaciado en móvil */
+    .sidebar-link {
+      padding: 0.8rem 1rem;
+      font-size: 1.1rem;
+    }
+
+    .sidebar-sublink {
+      padding: 0.6rem 0.8rem;
+      font-size: 1rem;
+    }
+
+    /* Ajustar el contenido principal para evitar empalme */
+    main {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+
+  /* Tablets */
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .sidebar-nested {
+      width: 240px;
+    }
+
+    .sidebar-nested.collapsed {
+      width: 70px;
+    }
+
+    /* Ajustar el contenido principal */
+    main {
+      margin-left: 240px;
+      transition: margin-left 0.3s ease;
+    }
+
+    .sidebar-nested.collapsed + main {
+      margin-left: 70px;
+    }
+  }
+
+  /* Desktop grande */
+  @media (min-width: 1201px) {
+    .sidebar-nested {
+      width: 260px;
+    }
+
+    .sidebar-nested.collapsed {
+      width: 70px;
+    }
+
+    /* Ajustar el contenido principal */
+    main {
+      margin-left: 260px;
+      transition: margin-left 0.3s ease;
+    }
+
+    .sidebar-nested.collapsed + main {
+      margin-left: 70px;
+    }
   }
 </style>
 
 <script>
   // Submenús animados, activo y colapso del sidebar
   document.addEventListener('DOMContentLoaded', function() {
+    console.log('Sidebar JavaScript cargado');
+    
     const sidebar = document.querySelector('.sidebar-nested');
     const mobileToggle = document.getElementById('mobileMenuToggle');
     const mobileClose = document.getElementById('mobileClose');
@@ -877,6 +919,12 @@ function getIcon(name) {
     const currentPath = window.location.pathname;
     let lastScrollY = window.scrollY;
     let isScrolling = false;
+    
+    console.log('Elementos encontrados:', {
+      sidebar: !!sidebar,
+      menuItems: menuItems.length,
+      currentPath
+    });
     
     // Función para marcar enlace activo basado en la URL actual
     function setActiveLink() {
@@ -949,6 +997,8 @@ function getIcon(name) {
     }
     
     // Configurar submenús y navegación
+    console.log('Configurando navegación para', menuItems.length, 'elementos con submenús');
+    
     menuItems.forEach((item) => {
       const btn = item.querySelector('.sidebar-link');
       if (btn) {
@@ -956,6 +1006,9 @@ function getIcon(name) {
           e.preventDefault();
           
           const hasSubmenu = item.hasAttribute('data-has-submenu') && item.getAttribute('data-has-submenu') === 'true';
+          const href = btn.getAttribute('data-href');
+          
+          console.log('Click detectado:', { hasSubmenu, href, label: btn.querySelector('.sidebar-label')?.textContent });
           
           if (hasSubmenu) {
             // Si tiene submenú, solo toggle (no navegar)
@@ -968,15 +1021,33 @@ function getIcon(name) {
             if (menuLabel) {
               localStorage.setItem(`submenu_${menuLabel}`, expanded.toString());
             }
-          } else {
+          } else if (href) {
             // Si no tiene submenú, navegar directamente
-            const href = btn.getAttribute('data-href');
-            if (href && href !== '#' && href !== '/') {
-              window.location.href = href;
-            }
+            console.log('Navegando a:', href);
+            window.location.href = href;
           }
         });
       }
+    });
+
+    // Configurar enlaces directos (sin submenús)
+    const directLinks = document.querySelectorAll('.sidebar-menu-item:not([data-has-submenu="true"]) .sidebar-link');
+    console.log('Configurando navegación para', directLinks.length, 'enlaces directos');
+    
+    directLinks.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const href = btn.getAttribute('data-href');
+        const label = btn.querySelector('.sidebar-label')?.textContent;
+        
+        console.log('Click en enlace directo:', { href, label });
+        
+        if (href) {
+          console.log('Navegando a:', href);
+          window.location.href = href;
+        }
+      });
     });
     
     // Configurar enlaces de submenús
@@ -1029,12 +1100,16 @@ function getIcon(name) {
     mobileClose?.addEventListener('click', closeMobileMenu);
     mobileOverlay?.addEventListener('click', closeMobileMenu);
 
-    // Cerrar menú móvil al hacer clic en enlaces
-    const allMobileLinks = document.querySelectorAll('.sidebar-link, .sidebar-sublink');
-    allMobileLinks.forEach(link => {
+    // Cerrar menú móvil solo al hacer clic en enlaces que navegan a páginas específicas
+    const mobileLinks = document.querySelectorAll('.sidebar-sublink');
+    mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 900) {
-          closeMobileMenu();
+        const href = link.getAttribute('href');
+        if (href && href !== '#' && window.innerWidth <= 900) {
+          // Solo cerrar si navega a una página específica
+          setTimeout(() => {
+            closeMobileMenu();
+          }, 100); // Pequeño delay para permitir que se procese la navegación
         }
       });
     });

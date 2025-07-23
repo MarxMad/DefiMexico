@@ -1,17 +1,764 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import Companies from '../components/Companies.astro';
 ---
 
-<MainLayout title="Empresas - DeFi México" description="Los alumni de DeFi México han fundado muchas de las startups crypto más impactantes de México">
-	<main>
-		<Companies />
-	</main>
+<MainLayout title="Portafolio - DeFi México" description="Los alumni de DeFi México han fundado muchas de las startups crypto más impactantes de México">
+	<div class="companies-page">
+		<!-- Hero Section con Logo -->
+		<section class="hero-section">
+			<div class="hero-background"></div>
+			<div class="container">
+				<div class="hero-logo-section">
+					<div class="hero-logo">
+						
+						<div class="hero-text">
+							<h1 class="hero-title">Nuestro Portafolio</h1>
+							<p class="hero-subtitle">Descubre las startups que están transformando el ecosistema crypto en México</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="hero-stats">
+					<div class="stat-card">
+						<div class="stat-icon">🚀</div>
+						<div class="stat-content">
+							<span class="stat-value">50+</span>
+							<span class="stat-label">Startups</span>
+						</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-icon">💰</div>
+						<div class="stat-content">
+							<span class="stat-value">$2.5B</span>
+							<span class="stat-label">Valoración</span>
+						</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-icon">🌍</div>
+						<div class="stat-content">
+							<span class="stat-value">15+</span>
+							<span class="stat-label">Países</span>
+						</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-icon">📈</div>
+						<div class="stat-content">
+							<span class="stat-value">$450M</span>
+							<span class="stat-label">Raised</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Categorías Section -->
+		<section class="categories-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">Categorías</h2>
+					<p class="section-subtitle">Explora startups por sector y tecnología</p>
+				</div>
+				
+				<div class="categories-grid">
+					<div class="category-card active">
+						<div class="category-icon">🏦</div>
+						<h3 class="category-name">DeFi</h3>
+						<span class="category-count">12 startups</span>
+					</div>
+					<div class="category-card">
+						<div class="category-icon">⚡</div>
+						<h3 class="category-name">Infraestructura</h3>
+						<span class="category-count">8 startups</span>
+					</div>
+					<div class="category-card">
+						<div class="category-icon">👥</div>
+						<h3 class="category-name">Consumer</h3>
+						<span class="category-count">15 startups</span>
+					</div>
+					<div class="category-card">
+						<div class="category-icon">🎮</div>
+						<h3 class="category-name">Gaming</h3>
+						<span class="category-count">6 startups</span>
+					</div>
+					<div class="category-card">
+						<div class="category-icon">💳</div>
+						<h3 class="category-name">Payments</h3>
+						<span class="category-count">9 startups</span>
+					</div>
+					<div class="category-card">
+						<div class="category-icon">🔒</div>
+						<h3 class="category-name">Privacy</h3>
+						<span class="category-count">4 startups</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Portafolio Section -->
+		<section class="portfolio-section">
+			<div class="container">
+				<div class="portfolio-header">
+					<h2 class="section-title">Startups Destacadas</h2>
+					<div class="portfolio-filters">
+						<select class="filter-select">
+							<option value="">Todas las cohortes</option>
+							<option value="2024">Cohorte 2024</option>
+							<option value="2023">Cohorte 2023</option>
+							<option value="2022">Cohorte 2022</option>
+						</select>
+						<select class="filter-select">
+							<option value="">Todas las etapas</option>
+							<option value="seed">Seed</option>
+							<option value="series-a">Series A</option>
+							<option value="series-b">Series B+</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="portfolio-grid">
+					<div class="startup-card featured">
+						<div class="startup-header">
+							<div class="startup-logo">🌮</div>
+							<div class="startup-badge">Destacada</div>
+						</div>
+						<div class="startup-content">
+							<h3 class="startup-name">TacoSwap</h3>
+							<p class="startup-description">DEX nativo de México con la mayor liquidez en tokens latinos</p>
+							<div class="startup-metrics">
+								<div class="metric">
+									<span class="metric-label">TVL</span>
+									<span class="metric-value">$45M</span>
+								</div>
+								<div class="metric">
+									<span class="metric-label">Usuarios</span>
+									<span class="metric-value">25K+</span>
+								</div>
+							</div>
+							<div class="startup-tags">
+								<span class="tag">DeFi</span>
+								<span class="tag">▲ ALL12</span>
+							</div>
+						</div>
+						<div class="startup-actions">
+							<button class="view-button">Ver Detalles</button>
+						</div>
+					</div>
+
+					<div class="startup-card">
+						<div class="startup-header">
+							<div class="startup-logo">🌵</div>
+						</div>
+						<div class="startup-content">
+							<h3 class="startup-name">CactusPay</h3>
+							<p class="startup-description">Plataforma de pagos crypto para comercios mexicanos</p>
+							<div class="startup-metrics">
+								<div class="metric">
+									<span class="metric-label">Volumen</span>
+									<span class="metric-value">$12M</span>
+								</div>
+								<div class="metric">
+									<span class="metric-label">Comercios</span>
+									<span class="metric-value">2K+</span>
+								</div>
+							</div>
+							<div class="startup-tags">
+								<span class="tag">Payments</span>
+								<span class="tag">▲ ALL8</span>
+							</div>
+						</div>
+						<div class="startup-actions">
+							<button class="view-button">Ver Detalles</button>
+						</div>
+					</div>
+
+					<div class="startup-card">
+						<div class="startup-header">
+							<div class="startup-logo">🔥</div>
+						</div>
+						<div class="startup-content">
+							<h3 class="startup-name">ChiliDAO</h3>
+							<p class="startup-description">Plataforma de governance descentralizado para startups</p>
+							<div class="startup-metrics">
+								<div class="metric">
+									<span class="metric-label">TVL</span>
+									<span class="metric-value">$8M</span>
+								</div>
+								<div class="metric">
+									<span class="metric-label">Votantes</span>
+									<span class="metric-value">5K+</span>
+								</div>
+							</div>
+							<div class="startup-tags">
+								<span class="tag">DAO</span>
+								<span class="tag">▲ ALL15</span>
+							</div>
+						</div>
+						<div class="startup-actions">
+							<button class="view-button">Ver Detalles</button>
+						</div>
+					</div>
+
+					<div class="startup-card">
+						<div class="startup-header">
+							<div class="startup-logo">🏛️</div>
+						</div>
+						<div class="startup-content">
+							<h3 class="startup-name">Aztec Protocol</h3>
+							<p class="startup-description">Solución de privacidad nativa en blockchain</p>
+							<div class="startup-metrics">
+								<div class="metric">
+									<span class="metric-label">Transacciones</span>
+									<span class="metric-value">1M+</span>
+								</div>
+								<div class="metric">
+									<span class="metric-label">Usuarios</span>
+									<span class="metric-value">15K+</span>
+								</div>
+							</div>
+							<div class="startup-tags">
+								<span class="tag">Privacy</span>
+								<span class="tag">▲ ALL6</span>
+							</div>
+						</div>
+						<div class="startup-actions">
+							<button class="view-button">Ver Detalles</button>
+						</div>
+					</div>
+
+					<div class="startup-card">
+						<div class="startup-header">
+							<div class="startup-logo">⚡</div>
+						</div>
+						<div class="startup-content">
+							<h3 class="startup-name">Lightning MX</h3>
+							<p class="startup-description">Implementación de Lightning Network en México</p>
+							<div class="startup-metrics">
+								<div class="metric">
+									<span class="metric-label">Canales</span>
+									<span class="metric-value">500+</span>
+								</div>
+								<div class="metric">
+									<span class="metric-label">Capacidad</span>
+									<span class="metric-value">$2M</span>
+								</div>
+							</div>
+							<div class="startup-tags">
+								<span class="tag">Bitcoin</span>
+								<span class="tag">▲ ALL10</span>
+							</div>
+						</div>
+						<div class="startup-actions">
+							<button class="view-button">Ver Detalles</button>
+						</div>
+					</div>
+
+					<div class="startup-card">
+						<div class="startup-header">
+							<div class="startup-logo">🎮</div>
+						</div>
+						<div class="startup-content">
+							<h3 class="startup-name">LuchaCrypto</h3>
+							<p class="startup-description">Plataforma de gaming NFT con temática mexicana</p>
+							<div class="startup-metrics">
+								<div class="metric">
+									<span class="metric-label">NFTs</span>
+									<span class="metric-value">10K+</span>
+								</div>
+								<div class="metric">
+									<span class="metric-label">Jugadores</span>
+									<span class="metric-value">8K+</span>
+								</div>
+							</div>
+							<div class="startup-tags">
+								<span class="tag">Gaming</span>
+								<span class="tag">▲ ALL7</span>
+							</div>
+						</div>
+						<div class="startup-actions">
+							<button class="view-button">Ver Detalles</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </MainLayout>
 
 <style>
-	main {
+	.companies-page {
 		position: relative;
 		z-index: 1;
+		margin-left: 260px;
+		transition: margin-left 0.3s ease;
+	}
+
+	/* Cuando el sidebar está colapsado */
+	.sidebar-nested.collapsed ~ .companies-page {
+		margin-left: 70px;
+	}
+
+	.container {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	/* Hero Section */
+	.hero-section {
+		padding: 6rem 0;
+		background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: 
+			radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+		animation: backgroundShift 20s ease-in-out infinite;
+	}
+
+	@keyframes backgroundShift {
+		0%, 100% { transform: scale(1) rotate(0deg); }
+		50% { transform: scale(1.1) rotate(1deg); }
+	}
+
+	/* Logo Section */
+	.hero-logo-section {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.hero-logo {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.logo-image-container {
+		position: relative;
+		width: 120px;
+		height: 120px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero-logo-image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		border-radius: 20px;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		filter: drop-shadow(0 10px 20px rgba(96, 165, 250, 0.2));
+	}
+
+	.hero-logo-image:hover {
+		transform: translateY(-5px) scale(1.02);
+		box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+		filter: drop-shadow(0 15px 30px rgba(96, 165, 250, 0.3));
+	}
+
+	.hero-text {
+		text-align: center;
+	}
+
+	.hero-title {
+		font-size: 4rem;
+		font-weight: 800;
+		margin: 0;
+		background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #10b981 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		letter-spacing: -0.02em;
+		line-height: 1.1;
+	}
+
+	.hero-subtitle {
+		font-size: 1.3rem;
+		color: rgba(255, 255, 255, 0.8);
+		margin: 1rem 0 0 0;
+		font-weight: 500;
+	}
+
+	/* Hero Stats */
+	.hero-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.stat-card {
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 16px;
+		padding: 2rem;
+		text-align: center;
+		backdrop-filter: blur(20px);
+		transition: all 0.3s ease;
+	}
+
+	.stat-card:hover {
+		transform: translateY(-5px);
+		border-color: rgba(96, 165, 250, 0.3);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	.stat-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.stat-value {
+		display: block;
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: white;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		font-size: 0.9rem;
+		color: rgba(255, 255, 255, 0.6);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	/* Section Headers */
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 3rem;
+		font-weight: 700;
+		color: white;
+		margin: 0 0 1rem 0;
+		background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #10b981 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-subtitle {
+		font-size: 1.2rem;
+		color: rgba(255, 255, 255, 0.8);
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+
+	/* Categories Section */
+	.categories-section {
+		padding: 6rem 0;
+		background: #121212;
+	}
+
+	.categories-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.category-card {
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 16px;
+		padding: 2rem;
+		text-align: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		backdrop-filter: blur(20px);
+	}
+
+	.category-card:hover,
+	.category-card.active {
+		transform: translateY(-5px);
+		border-color: rgba(96, 165, 250, 0.3);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+		background: rgba(255, 255, 255, 0.05);
+	}
+
+	.category-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.category-name {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: white;
+		margin: 0 0 0.5rem 0;
+	}
+
+	.category-count {
+		font-size: 0.9rem;
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	/* Portfolio Section */
+	.portfolio-section {
+		padding: 6rem 0;
+		background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+	}
+
+	.portfolio-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 3rem;
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
+
+	.portfolio-filters {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.filter-select {
+		padding: 0.75rem 1rem;
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 8px;
+		color: white;
+		font-size: 0.9rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.filter-select:hover {
+		background: rgba(255, 255, 255, 0.15);
+		border-color: rgba(255, 255, 255, 0.3);
+	}
+
+	.filter-select:focus {
+		outline: none;
+		border-color: #10b981;
+	}
+
+	.portfolio-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 2rem;
+	}
+
+	.startup-card {
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 20px;
+		padding: 2rem;
+		transition: all 0.3s ease;
+		backdrop-filter: blur(20px);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.startup-card:hover {
+		transform: translateY(-5px);
+		border-color: rgba(96, 165, 250, 0.3);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	.startup-card.featured {
+		border-color: rgba(16, 185, 129, 0.3);
+		background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+	}
+
+	.startup-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 1.5rem;
+	}
+
+	.startup-logo {
+		font-size: 3rem;
+		width: 80px;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 16px;
+	}
+
+	.startup-badge {
+		background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		font-size: 0.8rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.startup-name {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: white;
+		margin: 0 0 1rem 0;
+	}
+
+	.startup-description {
+		color: rgba(255, 255, 255, 0.7);
+		line-height: 1.6;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.startup-metrics {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.metric {
+		text-align: center;
+		padding: 1rem;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 12px;
+	}
+
+	.metric-label {
+		display: block;
+		font-size: 0.8rem;
+		color: rgba(255, 255, 255, 0.6);
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.metric-value {
+		display: block;
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: white;
+	}
+
+	.startup-tags {
+		display: flex;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.tag {
+		font-size: 0.8rem;
+		padding: 0.5rem 1rem;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 20px;
+		color: rgba(255, 255, 255, 0.8);
+		font-weight: 500;
+	}
+
+	.startup-actions {
+		text-align: center;
+	}
+
+	.view-button {
+		padding: 0.75rem 2rem;
+		background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+		color: white;
+		border: none;
+		border-radius: 8px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.view-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1200px) {
+		.portfolio-header {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+		
+		.portfolio-grid {
+			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		}
+	}
+
+	@media (max-width: 900px) {
+		.companies-page {
+			margin-left: 0;
+			padding-top: 80px;
+		}
+		
+		.container {
+			padding: 0 1rem;
+		}
+		
+		.hero-title {
+			font-size: 2.5rem;
+		}
+		
+		.hero-stats {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+		}
+		
+		.stat-card {
+			padding: 1.5rem;
+		}
+		
+		.stat-value {
+			font-size: 2rem;
+		}
+		
+		.categories-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.portfolio-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.portfolio-filters {
+			flex-direction: column;
+			width: 100%;
+		}
+		
+		.section-title {
+			font-size: 2rem;
+		}
+		
+		.startup-metrics {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.hero-stats {
+			grid-template-columns: 1fr;
+		}
+		
+		.categories-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.logo-image-container {
+			width: 80px;
+			height: 80px;
+		}
 	}
 </style> 

@@ -4,14 +4,29 @@ import Investments from '../components/Investments.astro';
 ---
 
 <MainLayout title="Inversiones Estratégicas - DeFi México" description="Proyectos de infraestructura que impulsan el ecosistema crypto en México">
-	<main>
+	<div class="investments-page">
 		<Investments />
-	</main>
+	</div>
 </MainLayout>
 
 <style>
-	main {
+	.investments-page {
 		position: relative;
 		z-index: 1;
+		margin-left: 260px;
+		transition: margin-left 0.3s ease;
+	}
+
+	/* Cuando el sidebar está colapsado */
+	.sidebar-nested.collapsed ~ .investments-page {
+		margin-left: 70px;
+	}
+
+	/* Responsive para móvil */
+	@media (max-width: 900px) {
+		.investments-page {
+			margin-left: 0;
+			padding-top: 80px;
+		}
 	}
 </style> 

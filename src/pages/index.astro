@@ -2,213 +2,1252 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="DeFi México - Acelerador" description="Tu puerta de entrada a las finanzas descentralizadas en México">
-	<main class="accelerator-page">
-		<!-- Hero Section -->
-		<section class="hero-section">
-			<div class="hero-background"></div>
-			<div class="hero-content">
-				<h1 class="hero-title">Tu Puerta de Entrada a las Finanzas Descentralizadas en México</h1>
-				<p class="hero-description">
-					DeFi México es la plataforma líder en línea para explorar y participar en el ecosistema de finanzas descentralizadas en México. Descubre tendencias, recursos educativos e insights de la comunidad con confianza.
-				</p>
-			</div>
-		</section>
+<MainLayout title="DeFi México - Dashboard" description="Tu puerta de entrada a las finanzas descentralizadas en México">
+  <div class="dashboard-page">
 
-		<!-- Key Highlights Section -->
-		<section class="highlights-section">
-			<div class="container">
-				<h2 class="section-subtitle">Key Highlights</h2>
-				<h3 class="section-title">¿Por qué elegir DeFi México?</h3>
-				<p class="section-description">
-					DeFi México ofrece una suite completa de recursos y herramientas para tu viaje en el mundo de las finanzas descentralizadas.
-				</p>
-				<div class="highlights-grid">
-					<div class="highlight-card">
-						<div class="highlight-icon">📚</div>
-						<h4 class="highlight-title">Recursos de Aprendizaje Extensos</h4>
-						<p class="highlight-description">
-							Accede a una vasta biblioteca de artículos, tutoriales y guías que cubren todos los aspectos de DeFi.
-						</p>
-					</div>
-					<div class="highlight-card">
-						<div class="highlight-icon">👥</div>
-						<h4 class="highlight-title">Soporte de Comunidad Activa</h4>
-						<p class="highlight-description">
-							Conéctate con una comunidad vibrante de entusiastas y expertos de DeFi.
-						</p>
-					</div>
-					<div class="highlight-card">
-						<div class="highlight-icon">📈</div>
-						<h4 class="highlight-title">Insights y Análisis de Mercado</h4>
-						<p class="highlight-description">
-							Mantente informado con las últimas tendencias del mercado, análisis y oportunidades de inversión.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Puedes seguir agregando el resto de las secciones de acelerador aquí si lo deseas -->
-	</main>
-</MainLayout>
+<!-- Hero Section con Logo -->
+<div class="hero-section">
+  <div class="hero-container">
+    <!-- Logo Principal -->
+    <div class="hero-logo-section">
+      <div class="hero-logo">
+        <div class="logo-image-container">
+          <img src="/DEFI.jpg" alt="DeFi México Logo" class="hero-logo-image" />
+        </div>
+        <div class="logo-text-large">
+          <h1 class="main-logo-title">DeFi México</h1>
+          <p class="main-logo-subtitle">Acelerando startups crypto en México</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero con Radar Fintech -->
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="radar-graphic">
+          <div class="radar-center"></div>
+          <div class="radar-circle radar-circle-1"></div>
+          <div class="radar-circle radar-circle-2"></div>
+          <div class="radar-circle radar-circle-3"></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <h2 class="hero-title">Explora el Radar Fintech</h2>
+        <p class="hero-description">
+          Sumérgete en nuestro radar interactivo para descubrir las últimas innovaciones y tendencias fintech en México.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-button">Ver Radar</button>
+          <div class="decorative-circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sección: ¿Por qué elegir DeFi México? -->
+<section class="why-choose-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">¿Por qué elegir DeFi México?</h2>
+      <p class="section-description">
+        DeFi México ofrece una suite completa de recursos y herramientas para tu viaje en el mundo de las finanzas descentralizadas.
+      </p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <div class="books-stack">
+            <div class="book book-1"></div>
+            <div class="book book-2"></div>
+            <div class="book book-3"></div>
+          </div>
+        </div>
+        <h3 class="feature-title">Recursos de Aprendizaje Extensos</h3>
+        <p class="feature-description">
+          Accede a una vasta biblioteca de artículos, tutoriales y guías que cubren todos los aspectos de DeFi.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <div class="community-icon">
+            <div class="person person-1"></div>
+            <div class="person person-2"></div>
+            <div class="activity-dot"></div>
+          </div>
+        </div>
+        <h3 class="feature-title">Soporte de Comunidad Activa</h3>
+        <p class="feature-description">
+          Conéctate con una comunidad vibrante de entusiastas y expertos de DeFi.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <div class="chart-icon">
+            <div class="chart-bg"></div>
+            <div class="chart-line"></div>
+          </div>
+        </div>
+        <h3 class="feature-title">Insights y Análisis de Mercado</h3>
+        <p class="feature-description">
+          Mantente informado con las últimas tendencias del mercado, análisis y oportunidades de inversión.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Misión y Valores -->
+<section class="mission-section">
+  <div class="container">
+    <div class="mission-content">
+      <div class="mission-text">
+        <h2 class="section-title">Nuestra Misión y Valores</h2>
+        <p class="mission-description">
+          Nuestra misión es hacer que DeFi sea accesible para todos en México. Creemos que las finanzas descentralizadas tienen el potencial de transformar el panorama financiero, proporcionando mayor transparencia, eficiencia y control sobre los activos financieros. Estamos comprometidos a fomentar una comunidad DeFi vibrante e inclusiva a través de la educación, colaboración e innovación.
+        </p>
+      </div>
+      <div class="mission-visual">
+        <div class="gradient-circle"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Nuestro Equipo -->
+<section class="team-section">
+  <div class="container">
+    <h2 class="section-title">Nuestro Equipo</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👨‍💼</div>
+        <h3 class="team-name">Carlos Ramírez</h3>
+        <p class="team-role">CEO & Fundador</p>
+      </div>
+      
+      <div class="team-card">
+        <div class="team-avatar">👨‍🔬</div>
+        <h3 class="team-name">Alejandro Vargas</h3>
+        <p class="team-role">CTO & Investigador</p>
+      </div>
+      
+      <div class="team-card">
+        <div class="team-avatar">👩‍💻</div>
+        <h3 class="team-name">Sofía Mendoza</h3>
+        <p class="team-role">Directora de Producto</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Impacto/Logros -->
+<section class="impact-section">
+  <div class="container">
+    <div class="impact-header">
+      <div class="impact-decorative"></div>
+      <h2 class="section-title">Impacto/Logros</h2>
+    </div>
+    
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-number">10,000+</div>
+        <div class="metric-label">MIEMBROS DE LA COMUNIDAD</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-number">500+</div>
+        <div class="metric-label">RECURSOS PUBLICADOS</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-number">50+</div>
+        <div class="metric-label">ALIANZAS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Insights y Análisis -->
+<section class="insights-section">
+  <div class="container">
+    <h2 class="section-title">Insights y Análisis</h2>
+    <div class="insights-content">
+      <div class="insights-text">
+        <h3 class="insights-subtitle">Análisis de Mercado: Q3 2025</h3>
+        <p class="insights-description">
+          Una visión integral del rendimiento del mercado DeFi en México durante el tercer trimestre de 2025.
+        </p>
+        <div class="insights-actions">
+          <button class="insights-button primary">Leer Más</button>
+          <button class="insights-button secondary">Wallet</button>
+        </div>
+      </div>
+      
+      <div class="insights-chart">
+        <div class="chart-container">
+          <div class="chart-dot"></div>
+          <div class="chart-bars">
+            <div class="chart-bar bar-1"></div>
+            <div class="chart-bar bar-2"></div>
+            <div class="chart-bar bar-3"></div>
+            <div class="chart-bar bar-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Recursos -->
+<section class="resources-section">
+  <div class="container">
+    <h2 class="section-title">Recursos</h2>
+    
+    <!-- Barra de búsqueda -->
+    <div class="search-container">
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar..." class="search-input">
+        <button class="search-button">🔍</button>
+      </div>
+    </div>
+    
+    <!-- Filtros -->
+    <div class="filter-buttons">
+      <button class="filter-btn active">Guías</button>
+      <button class="filter-btn">Tutoriales</button>
+      <button class="filter-btn">Reportes de Investigación</button>
+      <button class="filter-btn">Herramientas</button>
+      <button class="filter-btn">Foros Comunitarios</button>
+    </div>
+    
+    <!-- Recurso Destacado -->
+    <div class="featured-resource">
+      <h3 class="featured-title">Recursos Destacados</h3>
+      <div class="featured-card">
+        <div class="featured-content">
+          <h4 class="resource-title">La Guía Definitiva de Yield Farming</h4>
+          <p class="resource-description">
+            Aprende cómo maximizar tus retornos con estrategias de yield farming en el ecosistema DeFi.
+          </p>
+          <button class="resource-button">Ver Recurso</button>
+        </div>
+        <div class="featured-icons">
+          <div class="icon-dot"></div>
+          <div class="icon-wheat">🌾</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Vistas Previas -->
+    <div class="previews-section">
+      <h3 class="previews-title">Vistas Previas/Resúmenes</h3>
+      <div class="previews-grid">
+        <div class="preview-card">
+          <div class="preview-icon">📋</div>
+          <h4 class="preview-title">Checklist de Seguridad DeFi</h4>
+          <p class="preview-description">
+            Una lista completa para asegurar la seguridad de tus inversiones DeFi.
+          </p>
+        </div>
+        
+        <div class="preview-card">
+          <div class="preview-icon">📄</div>
+          <h4 class="preview-title">Entendiendo Smart Contracts</h4>
+          <p class="preview-description">
+            Una explicación detallada de smart contracts y su rol en las finanzas descentralizadas.
+          </p>
+        </div>
+        
+        <div class="preview-card">
+          <div class="preview-icon">⚖️</div>
+          <h4 class="preview-title">Navegando el Panorama Regulatorio</h4>
+          <p class="preview-description">
+            Una visión general del entorno regulatorio actual para DeFi en México.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <style>
-	.accelerator-page {
-		padding-top: 0;
-		margin-left: 260px; /* Espacio para el sidebar */
-		min-height: 100vh;
-		background: #1a1a1a;
-		transition: margin-left 0.3s ease;
-	}
-	
-	/* Cuando el sidebar está colapsado */
-	.sidebar-nested.collapsed ~ .accelerator-page {
-		margin-left: 70px;
-	}
+  /* Dashboard Page */
+  .dashboard-page {
+    padding-top: 0;
+    margin-left: 260px;
+    min-height: 100vh;
+    background: var(--dark-bg);
+    transition: margin-left 0.3s ease;
+  }
 
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 2rem;
-	}
+  /* Cuando el sidebar está colapsado */
+  .sidebar-nested.collapsed ~ .dashboard-page {
+    margin-left: 70px;
+  }
 
-	/* Hero Section */
-	.hero-section {
-		position: relative;
-		min-height: 80vh;
-		display: flex;
-		align-items: center;
-		background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-		overflow: hidden;
-	}
+  /* Variables globales */
+  :root {
+    --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --secondary-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --dark-bg: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --border-color: rgba(255, 255, 255, 0.1);
+  }
 
-	.hero-background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: 
-			radial-gradient(circle at 30% 70%, rgba(188, 82, 238, 0.1) 0%, transparent 50%),
-			radial-gradient(circle at 70% 30%, rgba(50, 69, 255, 0.1) 0%, transparent 50%);
-	}
+  /* Estilos generales */
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
 
-	.hero-content {
-		position: relative;
-		z-index: 2;
-		max-width: 800px;
-		margin: 0 auto;
-		text-align: center;
-		padding: 0 2rem;
-	}
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
-	.hero-title {
-		font-size: clamp(2.5rem, 5vw, 4rem);
-		font-weight: 700;
-		color: white;
-		margin: 0 0 2rem 0;
-		line-height: 1.2;
-		letter-spacing: -0.02em;
-	}
+  .section-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+  }
 
-	.hero-description {
-		font-size: 1.25rem;
-		color: rgba(255, 255, 255, 0.8);
-		line-height: 1.6;
-		margin: 0;
-	}
+  /* Hero Section */
+  .hero-section {
+    background: var(--dark-bg);
+    padding: 6rem 0 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
 
-	/* Highlights Section */
-	.highlights-section {
-		padding: 6rem 0;
-		background: #121212;
-	}
+  /* Efecto de fondo animado */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+    animation: backgroundShift 20s ease-in-out infinite;
+  }
 
-	.section-subtitle {
-		font-size: 1rem;
-		color: rgba(255, 255, 255, 0.6);
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		margin: 0 0 0.5rem 0;
-		text-align: center;
-	}
+  @keyframes backgroundShift {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(1deg); }
+  }
 
-	.section-title {
-		font-size: 3rem;
-		font-weight: 700;
-		color: white;
-		text-align: center;
-		margin: 0 0 1rem 0;
-		letter-spacing: -0.02em;
-	}
+  .hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+  }
 
-	.section-description {
-		font-size: 1.25rem;
-		color: rgba(255, 255, 255, 0.7);
-		text-align: center;
-		max-width: 600px;
-		margin: 0 auto 4rem auto;
-		line-height: 1.6;
-	}
+  /* Logo Principal */
+  .hero-logo-section {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 
-	.highlights-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-	}
+  .hero-logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 
-	.highlight-card {
-		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 16px;
-		padding: 2rem;
-		text-align: center;
-		transition: all 0.3s ease;
-	}
+  .logo-image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-	.highlight-card:hover {
-		background: rgba(255, 255, 255, 0.1);
-		transform: translateY(-5px);
-	}
+  .hero-logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 10px 20px rgba(96, 165, 250, 0.2));
+  }
 
-	.highlight-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-	}
+  .hero-logo-image:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    filter: drop-shadow(0 15px 30px rgba(96, 165, 250, 0.3));
+  }
 
-	.highlight-title {
-		font-size: 1.5rem;
-		font-weight: 600;
-		color: white;
-		margin: 0 0 1rem 0;
-	}
+  .logo-text-large {
+    text-align: center;
+  }
 
-	.highlight-description {
-		color: rgba(255, 255, 255, 0.7);
-		line-height: 1.6;
-		margin: 0;
-	}
+  .main-logo-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #10b981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+  }
 
-	@media (max-width: 768px) {
-		.highlights-section {
-			padding: 3rem 0;
-		}
-		.section-title {
-			font-size: 2.2rem;
-		}
-		.highlight-card {
-			padding: 1.2rem;
-		}
-		.highlights-grid {
-			gap: 1rem;
-		}
-		
-		.accelerator-page {
-			margin-left: 0; /* En móvil, sin sidebar */
-			padding-top: 80px; /* Espacio para el botón hamburguesa */
-		}
-	}
+  @keyframes titleGlow {
+    from { filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.3)); }
+    to { filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.6)); }
+  }
+
+  .main-logo-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin: 1rem 0 0 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Radar Graphic */
+  .radar-graphic {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .radar-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #3b82f6;
+    border-radius: 50%;
+    z-index: 4;
+  }
+
+  .radar-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+  }
+
+  .radar-circle-1 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .radar-circle-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .radar-circle-3 {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Hero Right */
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cta-button {
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.25), 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .cta-button:hover::before {
+    left: 100%;
+  }
+
+  .cta-button:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(16, 185, 129, 0.35), 0 6px 15px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .cta-button:active {
+    transform: translateY(-1px) scale(0.98);
+    transition: all 0.1s;
+  }
+
+  .decorative-circle {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+  }
+
+  /* Why Choose Section */
+  .why-choose-section {
+    background: var(--dark-bg);
+    padding: 6rem 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .feature-icon {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Books Stack Icon */
+  .books-stack {
+    position: relative;
+    width: 60px;
+    height: 40px;
+  }
+
+  .book {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+  }
+
+  .book-1 {
+    background: #10b981;
+    top: 0;
+    left: 0;
+  }
+
+  .book-2 {
+    background: #ef4444;
+    top: 5px;
+    left: 5px;
+  }
+
+  .book-3 {
+    background: #3b82f6;
+    top: 10px;
+    left: 10px;
+  }
+
+  /* Community Icon */
+  .community-icon {
+    position: relative;
+    width: 60px;
+    height: 40px;
+  }
+
+  .person {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #60a5fa;
+    border-radius: 50%;
+  }
+
+  .person-1 {
+    top: 10px;
+    left: 0;
+  }
+
+  .person-2 {
+    top: 10px;
+    right: 0;
+  }
+
+  .activity-dot {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background: #8b5cf6;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* Chart Icon */
+  .chart-icon {
+    position: relative;
+    width: 60px;
+    height: 40px;
+  }
+
+  .chart-bg {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 4px;
+  }
+
+  .chart-line {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: #ef4444;
+    transform: translateY(-50%);
+  }
+
+  .feature-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .feature-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Mission Section */
+  .mission-section {
+    background: var(--dark-bg);
+    padding: 6rem 0;
+  }
+
+  .mission-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .mission-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .gradient-circle {
+    width: 200px;
+    height: 200px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  /* Team Section */
+  .team-section {
+    background: var(--dark-bg);
+    padding: 6rem 0;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .team-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .team-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .team-avatar {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .team-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .team-role {
+    color: var(--text-secondary);
+  }
+
+  /* Impact Section */
+  .impact-section {
+    background: var(--dark-bg);
+    padding: 6rem 0;
+  }
+
+  .impact-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .impact-decorative {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .metric-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+  }
+
+  .metric-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #8b5cf6;
+    margin-bottom: 0.5rem;
+  }
+
+  .metric-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Insights Section */
+  .insights-section {
+    background: var(--dark-bg);
+    padding: 6rem 0;
+  }
+
+  .insights-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .insights-subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .insights-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .insights-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .insights-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .insights-button.primary {
+    background: var(--primary-gradient);
+    color: white;
+  }
+
+  .insights-button.secondary {
+    background: var(--primary-gradient);
+    color: white;
+  }
+
+  .insights-button:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Chart */
+  .chart-container {
+    background: var(--secondary-gradient);
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+    height: 200px;
+  }
+
+  .chart-dot {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+  }
+
+  .chart-bars {
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    height: 100%;
+    padding: 2rem 0;
+  }
+
+  .chart-bar {
+    background: white;
+    border-radius: 4px;
+    width: 30px;
+  }
+
+  .bar-1 { height: 60%; }
+  .bar-2 { height: 90%; }
+  .bar-3 { height: 40%; }
+  .bar-4 { height: 70%; }
+
+  /* Resources Section */
+  .resources-section {
+    background: var(--dark-bg);
+    padding: 6rem 0;
+  }
+
+  .search-container {
+    margin-bottom: 2rem;
+  }
+
+  .search-bar {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .search-input {
+    flex: 1;
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px 0 0 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+
+  .search-button {
+    padding: 1rem 1.5rem;
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    cursor: pointer;
+  }
+
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: var(--primary-gradient);
+    color: white;
+    border-color: transparent;
+  }
+
+  .featured-resource {
+    margin-bottom: 4rem;
+  }
+
+  .featured-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .featured-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .resource-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .resource-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .resource-button {
+    padding: 0.8rem 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .resource-button:hover {
+    background: var(--primary-gradient);
+    color: white;
+    border-color: transparent;
+  }
+
+  .featured-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .icon-dot {
+    width: 12px;
+    height: 12px;
+    background: #8b5cf6;
+    border-radius: 50%;
+  }
+
+  .icon-wheat {
+    font-size: 2rem;
+  }
+
+  .previews-section {
+    margin-top: 4rem;
+  }
+
+  .previews-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .previews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .preview-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+  }
+
+  .preview-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .preview-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .preview-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .preview-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+     /* Responsive Design */
+   @media (max-width: 1200px) {
+     .hero-content {
+       grid-template-columns: 1fr;
+       gap: 3rem;
+       text-align: center;
+       padding: 2rem;
+     }
+
+     .mission-content {
+       grid-template-columns: 1fr;
+       gap: 3rem;
+     }
+
+     .insights-content {
+       grid-template-columns: 1fr;
+       gap: 3rem;
+     }
+
+     .main-logo-title {
+       font-size: 3rem;
+     }
+
+     .logo-image-container {
+       width: 150px;
+       height: 150px;
+     }
+   }
+
+     @media (max-width: 768px) {
+     .container {
+       padding: 0 1rem;
+     }
+
+     .hero-content {
+       padding: 1.5rem;
+       gap: 2rem;
+     }
+
+     .hero-title {
+       font-size: 2.5rem;
+     }
+
+     .section-title {
+       font-size: 2rem;
+     }
+
+     .main-logo-title {
+       font-size: 2.5rem;
+     }
+
+     .main-logo-subtitle {
+       font-size: 1.1rem;
+     }
+
+     .logo-image-container {
+       width: 120px;
+       height: 120px;
+     }
+
+     .features-grid {
+       grid-template-columns: 1fr;
+     }
+
+     .team-grid {
+       grid-template-columns: 1fr;
+     }
+
+     .metrics-grid {
+       grid-template-columns: 1fr;
+     }
+
+     .previews-grid {
+       grid-template-columns: 1fr;
+     }
+
+     .filter-buttons {
+       flex-direction: column;
+       align-items: center;
+     }
+
+     .featured-card {
+       flex-direction: column;
+       text-align: center;
+       gap: 2rem;
+     }
+
+     .insights-actions {
+       flex-direction: column;
+     }
+   }
+
+     @media (max-width: 480px) {
+     .hero-title {
+       font-size: 2rem;
+     }
+
+     .section-title {
+       font-size: 1.8rem;
+     }
+
+     .radar-graphic {
+       width: 200px;
+       height: 200px;
+     }
+
+     .radar-circle-3 {
+       width: 200px;
+       height: 200px;
+     }
+   }
+
+   /* Responsive para sidebar */
+   @media (max-width: 900px) {
+     .dashboard-page {
+       margin-left: 0;
+       padding-top: 80px;
+     }
+   }
 </style>
 
-<!-- Espacio de prueba para scroll -->
-<div style="height: 120vh; width: 100%;"></div>
+<script>
+  // Funcionalidad para los filtros
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remover clase active de todos los botones
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Agregar clase active al botón clickeado
+        this.classList.add('active');
+      });
+    });
+
+    // Funcionalidad para el botón CTA
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+      ctaButton.addEventListener('click', function() {
+        // Aquí puedes agregar la lógica para abrir el radar
+        console.log('Abriendo Radar Fintech...');
+      });
+    }
+
+    // Funcionalidad para los botones de insights
+    const insightsButtons = document.querySelectorAll('.insights-button');
+    insightsButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const text = this.textContent;
+        console.log(`Botón clickeado: ${text}`);
+      });
+    });
+  });
+</script>
+  </div>
+</MainLayout>

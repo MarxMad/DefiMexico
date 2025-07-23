@@ -1,0 +1,56 @@
+---
+// SimpleRainbowKitWrapper.astro - Wrapper simple para RainbowKit
+---
+
+<div id="simple-rainbowkit-container">
+  <p style="color: white; margin: 1rem;">Inicializando RainbowKit...</p>
+</div>
+
+<script>
+  import { createRoot } from 'react-dom/client';
+  import DeFiRainbowKitProvider from './RainbowKitProvider.jsx';
+  import SimpleRainbowKit from './SimpleRainbowKit.jsx';
+  import React from 'react';
+
+  console.log('SimpleRainbowKitWrapper iniciando...');
+
+  function initRainbowKit() {
+    const container = document.getElementById('simple-rainbowkit-container');
+    
+    if (container) {
+      console.log('Contenedor encontrado, iniciando RainbowKit...');
+      
+      try {
+        const root = createRoot(container);
+        const provider = React.createElement(DeFiRainbowKitProvider, null,
+          React.createElement(SimpleRainbowKit)
+        );
+        
+        root.render(provider);
+        console.log('RainbowKit iniciado exitosamente');
+      } catch (error) {
+        console.error('Error iniciando RainbowKit:', error);
+        container.innerHTML = `
+          <div style="color: red; padding: 1rem; border: 1px solid red; border-radius: 8px;">
+            Error: ${error.message}
+          </div>
+        `;
+      }
+    } else {
+      console.error('Contenedor no encontrado');
+    }
+  }
+
+  // Inicializar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRainbowKit);
+  } else {
+    initRainbowKit();
+  }
+</script>
+
+<style>
+  #simple-rainbowkit-container {
+    width: 100%;
+  }
+</style> 

@@ -1,0 +1,860 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Métricas - DeFi México" description="Estadísticas y datos del ecosistema crypto en México">
+	<div class="metrics-page">
+		<!-- Hero Section -->
+		<section class="hero-section">
+			<div class="hero-background"></div>
+			<div class="container">
+				<div class="hero-content">
+					<h1 class="hero-title">Métricas del Ecosistema</h1>
+					<p class="hero-subtitle">Datos en tiempo real del impacto de DeFi México en el ecosistema crypto</p>
+					<div class="hero-stats">
+						<div class="stat-item">
+							<span class="stat-value">$2.5B</span>
+							<span class="stat-label">Valoración Total</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-value">50+</span>
+							<span class="stat-label">Startups</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-value">$450M</span>
+							<span class="stat-label">Capital Levantado</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-value">15+</span>
+							<span class="stat-label">Países</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Portfolio Performance -->
+		<section class="performance-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">Rendimiento del Portafolio</h2>
+					<p class="section-subtitle">Métricas clave de nuestras inversiones y startups</p>
+				</div>
+				
+				<div class="performance-grid">
+					<div class="performance-card">
+						<div class="performance-header">
+							<div class="performance-icon">📈</div>
+							<div class="performance-trend positive">+1,200%</div>
+						</div>
+						<div class="performance-content">
+							<h3 class="performance-title">Crecimiento Promedio</h3>
+							<div class="performance-value">1,200%</div>
+							<p class="performance-description">Crecimiento promedio en valoración de startups en 24 meses</p>
+							<div class="performance-chart">
+								<div class="chart-bar" style="width: 85%"></div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="performance-card">
+						<div class="performance-header">
+							<div class="performance-icon">💰</div>
+							<div class="performance-trend positive">+45%</div>
+						</div>
+						<div class="performance-content">
+							<h3 class="performance-title">ROI Promedio</h3>
+							<div class="performance-value">45x</div>
+							<p class="performance-description">Retorno promedio de inversión en startups exitosas</p>
+							<div class="performance-chart">
+								<div class="chart-bar" style="width: 75%"></div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="performance-card">
+						<div class="performance-header">
+							<div class="performance-icon">🚀</div>
+							<div class="performance-trend positive">+85%</div>
+						</div>
+						<div class="performance-content">
+							<h3 class="performance-title">Tasa de Éxito</h3>
+							<div class="performance-value">85%</div>
+							<p class="performance-description">Porcentaje de startups que alcanzan Series A o superior</p>
+							<div class="performance-chart">
+								<div class="chart-bar" style="width: 85%"></div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="performance-card">
+						<div class="performance-header">
+							<div class="performance-icon">⏱️</div>
+							<div class="performance-trend positive">-40%</div>
+						</div>
+						<div class="performance-content">
+							<h3 class="performance-title">Tiempo a Series A</h3>
+							<div class="performance-value">18 meses</div>
+							<p class="performance-description">Tiempo promedio para alcanzar Series A</p>
+							<div class="performance-chart">
+								<div class="chart-bar" style="width: 60%"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Category Breakdown -->
+		<section class="category-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">Desglose por Categorías</h2>
+					<p class="section-subtitle">Distribución de startups y valoración por sector</p>
+				</div>
+				
+				<div class="category-breakdown">
+					<div class="category-chart">
+						<div class="chart-item" style="--percentage: 35%; --color: #10b981;">
+							<div class="chart-segment"></div>
+							<div class="chart-label">
+								<span class="category-name">DeFi</span>
+								<span class="category-value">35% - $875M</span>
+							</div>
+						</div>
+						<div class="chart-item" style="--percentage: 25%; --color: #3b82f6;">
+							<div class="chart-segment"></div>
+							<div class="chart-label">
+								<span class="category-name">Infraestructura</span>
+								<span class="category-value">25% - $625M</span>
+							</div>
+						</div>
+						<div class="chart-item" style="--percentage: 20%; --color: #a855f7;">
+							<div class="chart-segment"></div>
+							<div class="chart-label">
+								<span class="category-name">Consumer</span>
+								<span class="category-value">20% - $500M</span>
+							</div>
+						</div>
+						<div class="chart-item" style="--percentage: 12%; --color: #f59e0b;">
+							<div class="chart-segment"></div>
+							<div class="chart-label">
+								<span class="category-name">Payments</span>
+								<span class="category-value">12% - $300M</span>
+							</div>
+						</div>
+						<div class="chart-item" style="--percentage: 8%; --color: #ef4444;">
+							<div class="chart-segment"></div>
+							<div class="chart-label">
+								<span class="category-name">Gaming</span>
+								<span class="category-value">8% - $200M</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Growth Metrics -->
+		<section class="growth-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">Métricas de Crecimiento</h2>
+					<p class="section-subtitle">Evolución del ecosistema a lo largo del tiempo</p>
+				</div>
+				
+				<div class="growth-metrics">
+					<div class="growth-card">
+						<h3 class="growth-title">Valoración Total</h3>
+						<div class="growth-chart">
+							<svg class="chart-svg" viewBox="0 0 400 200" preserveAspectRatio="none">
+								<path class="chart-path" d="M 0 180 L 100 150 L 200 110 L 300 60 L 400 0" stroke="#10b981" stroke-width="3" fill="none"/>
+								<circle cx="0" cy="180" r="6" fill="#10b981" class="chart-point"/>
+								<circle cx="100" cy="150" r="6" fill="#10b981" class="chart-point"/>
+								<circle cx="200" cy="110" r="6" fill="#10b981" class="chart-point"/>
+								<circle cx="300" cy="60" r="6" fill="#10b981" class="chart-point"/>
+								<circle cx="400" cy="0" r="6" fill="#10b981" class="chart-point"/>
+							</svg>
+						</div>
+						<div class="growth-stats">
+							<div class="growth-stat">
+								<span class="stat-label">2022</span>
+								<span class="stat-value">$500M</span>
+							</div>
+							<div class="growth-stat">
+								<span class="stat-label">2023</span>
+								<span class="stat-value">$1.2B</span>
+							</div>
+							<div class="growth-stat">
+								<span class="stat-label">2024</span>
+								<span class="stat-value">$2.5B</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="growth-card">
+						<h3 class="growth-title">Número de Startups</h3>
+						<div class="growth-chart">
+							<svg class="chart-svg" viewBox="0 0 400 200" preserveAspectRatio="none">
+								<path class="chart-path" d="M 0 160 L 133 120 L 266 80 L 400 0" stroke="#10b981" stroke-width="3" fill="none"/>
+								<circle cx="0" cy="160" r="6" fill="#10b981" class="chart-point"/>
+								<circle cx="133" cy="120" r="6" fill="#10b981" class="chart-point"/>
+								<circle cx="266" cy="80" r="6" fill="#10b981" class="chart-point"/>
+								<circle cx="400" cy="0" r="6" fill="#10b981" class="chart-point"/>
+							</svg>
+						</div>
+						<div class="growth-stats">
+							<div class="growth-stat">
+								<span class="stat-label">2022</span>
+								<span class="stat-value">15</span>
+							</div>
+							<div class="growth-stat">
+								<span class="stat-label">2023</span>
+								<span class="stat-value">32</span>
+							</div>
+							<div class="growth-stat">
+								<span class="stat-label">2024</span>
+								<span class="stat-value">50+</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Geographic Distribution -->
+		<section class="geographic-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">Distribución Geográfica</h2>
+					<p class="section-subtitle">Presencia global de nuestras startups</p>
+				</div>
+				
+				<div class="geographic-grid">
+					<div class="region-card">
+						<div class="region-header">
+							<div class="region-icon">🇲🇽</div>
+							<h3 class="region-name">México</h3>
+						</div>
+						<div class="region-stats">
+							<div class="region-stat">
+								<span class="stat-value">25</span>
+								<span class="stat-label">Startups</span>
+							</div>
+							<div class="region-stat">
+								<span class="stat-value">$1.2B</span>
+								<span class="stat-label">Valoración</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="region-card">
+						<div class="region-header">
+							<div class="region-icon">🇧🇷</div>
+							<h3 class="region-name">Brasil</h3>
+						</div>
+						<div class="region-stats">
+							<div class="region-stat">
+								<span class="stat-value">12</span>
+								<span class="stat-label">Startups</span>
+							</div>
+							<div class="region-stat">
+								<span class="stat-value">$600M</span>
+								<span class="stat-label">Valoración</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="region-card">
+						<div class="region-header">
+							<div class="region-icon">🇦🇷</div>
+							<h3 class="region-name">Argentina</h3>
+						</div>
+						<div class="region-stats">
+							<div class="region-stat">
+								<span class="stat-value">8</span>
+								<span class="stat-label">Startups</span>
+							</div>
+							<div class="region-stat">
+								<span class="stat-value">$400M</span>
+								<span class="stat-label">Valoración</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="region-card">
+						<div class="region-header">
+							<div class="region-icon">🌍</div>
+							<h3 class="region-name">Otros</h3>
+						</div>
+						<div class="region-stats">
+							<div class="region-stat">
+								<span class="stat-value">5</span>
+								<span class="stat-label">Startups</span>
+							</div>
+							<div class="region-stat">
+								<span class="stat-value">$300M</span>
+								<span class="stat-label">Valoración</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</MainLayout>
+
+<style>
+	.metrics-page {
+		position: relative;
+		z-index: 1;
+		margin-left: 260px;
+		transition: margin-left 0.3s ease;
+	}
+
+	/* Cuando el sidebar está colapsado */
+	.sidebar-nested.collapsed ~ .metrics-page {
+		margin-left: 70px;
+	}
+
+	.container {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	/* Hero Section */
+	.hero-section {
+		padding: 6rem 0;
+		background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: 
+			radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+		animation: backgroundShift 20s ease-in-out infinite;
+	}
+
+	@keyframes backgroundShift {
+		0%, 100% { transform: scale(1) rotate(0deg); }
+		50% { transform: scale(1.1) rotate(1deg); }
+	}
+
+	.hero-content {
+		text-align: center;
+		position: relative;
+		z-index: 2;
+	}
+
+	.hero-title {
+		font-size: 4rem;
+		font-weight: 800;
+		margin: 0 0 1rem 0;
+		background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #10b981 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		letter-spacing: -0.02em;
+		line-height: 1.1;
+	}
+
+	.hero-subtitle {
+		font-size: 1.3rem;
+		color: rgba(255, 255, 255, 0.8);
+		margin: 0 0 3rem 0;
+		font-weight: 500;
+	}
+
+	.hero-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.stat-item {
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 16px;
+		padding: 2rem;
+		text-align: center;
+		backdrop-filter: blur(20px);
+		transition: all 0.3s ease;
+	}
+
+	.stat-item:hover {
+		transform: translateY(-5px);
+		border-color: rgba(96, 165, 250, 0.3);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	.stat-value {
+		display: block;
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: white;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		font-size: 0.9rem;
+		color: rgba(255, 255, 255, 0.6);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	/* Section Headers */
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 3rem;
+		font-weight: 700;
+		color: white;
+		margin: 0 0 1rem 0;
+		background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #10b981 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-subtitle {
+		font-size: 1.2rem;
+		color: rgba(255, 255, 255, 0.8);
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+
+	/* Performance Section */
+	.performance-section {
+		padding: 6rem 0;
+		background: #121212;
+	}
+
+	.performance-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.performance-card {
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 20px;
+		padding: 2rem;
+		transition: all 0.3s ease;
+		backdrop-filter: blur(20px);
+	}
+
+	.performance-card:hover {
+		transform: translateY(-5px);
+		border-color: rgba(96, 165, 250, 0.3);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	.performance-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.performance-icon {
+		font-size: 2rem;
+	}
+
+	.performance-trend {
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 600;
+	}
+
+	.performance-trend.positive {
+		background: rgba(16, 185, 129, 0.2);
+		color: #10b981;
+	}
+
+	.performance-title {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: white;
+		margin: 0 0 1rem 0;
+	}
+
+	.performance-value {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: white;
+		margin-bottom: 1rem;
+		background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #10b981 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.performance-description {
+		color: rgba(255, 255, 255, 0.7);
+		line-height: 1.6;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.performance-chart {
+		height: 8px;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 4px;
+		overflow: hidden;
+	}
+
+	.chart-bar {
+		height: 100%;
+		background: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);
+		border-radius: 4px;
+		transition: width 1s ease;
+	}
+
+	/* Category Section */
+	.category-section {
+		padding: 6rem 0;
+		background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+	}
+
+	.category-breakdown {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.category-chart {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.chart-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.chart-segment {
+		width: var(--percentage);
+		height: 40px;
+		background: var(--color);
+		border-radius: 8px;
+		transition: width 1s ease;
+	}
+
+	.chart-label {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex: 1;
+		color: white;
+	}
+
+	.category-name {
+		font-weight: 600;
+	}
+
+	.category-value {
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 0.9rem;
+	}
+
+	/* Growth Section */
+	.growth-section {
+		padding: 6rem 0;
+		background: #121212;
+	}
+
+	.growth-metrics {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 3rem;
+	}
+
+	.growth-card {
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 20px;
+		padding: 2rem;
+		backdrop-filter: blur(20px);
+	}
+
+	.growth-title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: white;
+		margin: 0 0 2rem 0;
+		text-align: center;
+	}
+
+	.growth-chart {
+		height: 200px;
+		position: relative;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		border-left: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.chart-svg {
+		width: 100%;
+		height: 100%;
+	}
+
+	.chart-path {
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
+	}
+
+	.chart-point {
+		filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.5));
+		transition: all 0.3s ease;
+	}
+
+	.chart-point:hover {
+		r: 8;
+		filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.8));
+	}
+
+	.growth-stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
+
+	.growth-stat {
+		text-align: center;
+		padding: 1rem;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 12px;
+	}
+
+	.growth-stat .stat-label {
+		display: block;
+		font-size: 0.8rem;
+		color: rgba(255, 255, 255, 0.6);
+		margin-bottom: 0.5rem;
+	}
+
+	.growth-stat .stat-value {
+		display: block;
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: white;
+	}
+
+	/* Geographic Section */
+	.geographic-section {
+		padding: 6rem 0;
+		background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+	}
+
+	.geographic-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2.5rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.region-card {
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		border-radius: 20px;
+		padding: 2.5rem 2rem;
+		text-align: center;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		backdrop-filter: blur(20px);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.region-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.region-card:hover {
+		transform: translateY(-8px) scale(1.02);
+		border-color: rgba(96, 165, 250, 0.4);
+		box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+	}
+
+	.region-card:hover::before {
+		opacity: 1;
+	}
+
+	.region-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 2rem;
+		position: relative;
+		z-index: 2;
+	}
+
+	.region-icon {
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
+		filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+	}
+
+	.region-name {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: white;
+		margin: 0;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.region-stats {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		position: relative;
+		z-index: 2;
+	}
+
+	.region-stat {
+		text-align: center;
+		padding: 1.5rem;
+		background: rgba(255, 255, 255, 0.08);
+		border-radius: 16px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.region-stat:hover {
+		background: rgba(255, 255, 255, 0.12);
+		transform: translateY(-2px);
+	}
+
+	.region-stat .stat-value {
+		display: block;
+		font-size: 1.75rem;
+		font-weight: 700;
+		color: white;
+		margin-bottom: 0.5rem;
+		background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #10b981 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.region-stat .stat-label {
+		font-size: 0.85rem;
+		color: rgba(255, 255, 255, 0.7);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 500;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1200px) {
+		.performance-grid {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		}
+		
+		.growth-metrics {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.metrics-page {
+			margin-left: 0;
+			padding-top: 80px;
+		}
+		
+		.container {
+			padding: 0 1rem;
+		}
+		
+		.hero-title {
+			font-size: 2.5rem;
+		}
+		
+		.hero-stats {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+		}
+		
+		.stat-item {
+			padding: 1.5rem;
+		}
+		
+		.stat-value {
+			font-size: 2rem;
+		}
+		
+		.performance-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.geographic-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.5rem;
+		}
+		
+		.region-card {
+			padding: 2rem 1.5rem;
+		}
+		
+		.region-icon {
+			font-size: 2.5rem;
+		}
+		
+		.region-name {
+			font-size: 1.25rem;
+		}
+		
+		.region-stat .stat-value {
+			font-size: 1.5rem;
+		}
+		
+		.section-title {
+			font-size: 2rem;
+		}
+		
+		.growth-stats {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.hero-stats {
+			grid-template-columns: 1fr;
+		}
+		
+		.geographic-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.region-stats {
+			grid-template-columns: 1fr;
+		}
+	}
+</style> 
